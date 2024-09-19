@@ -182,6 +182,11 @@ def construct_import(data):
     df_filt = df_filt[df_filt['end_date'] >= cutoff_date]
     print("---> DATES ADJUSTED")
 
+    df_filt['end_date'] = pd.to_datetime(df_filt['end_date'])
+    max_date = df_filt['end_date'].max()
+
+    print("---> LAST UPDATE: " + str(max_date))
+
     df_filt['candidate_name'] = df_filt['candidate_name'].replace('Joe Biden', 'Kamala Harris')
     df_filt = df_filt[df_filt['candidate_name'].isin(['Donald Trump', 'Kamala Harris'])]
 
@@ -434,59 +439,6 @@ def print_swing_states_won(df_pivot, swing_states):
 from itertools import product
 from collections import Counter
 
-def coconut_tree(df_pivot, numsimulations=1000):
-    # Define swing states
-    swing_states = ['North Carolina', 'Pennsylvania', 'Georgia', 'Wisconsin', 'Michigan', 'Arizona', 'Nevada']
-
-    # Initialize results list
-    results = []
-
-    # Define the threshold to win the election
-    WINNING_THRESHOLD = 270
-
-    # Run simulations
-    for _ in range(num_simulations):
-        # Initialize electoral votes for candidates
-        electoral_votes = {
-            'Kamala Harris': 0,
-            'Donald Trump': 0
-        }
-
-        # Simulate the outcome of each state
-        for _, row in df_pivot.iterrows():
-            if np.random.rand() < row['win_percent_harris'] / 100:
-                electoral_votes['Kamala Harris'] += row['electoral_votes']
-            else:
-                electoral_votes['Donald Trump'] += row['electoral_votes']
-
-        # Determine swing state outcomes
-        swing_state_outcomes = []
-        for state in swing_states:
-            winner = df_pivot[df_pivot['state'] == state]['winner'].values[0]
-            swing_state_outcomes.append(winner)
-
-        # Store the result
-        results.append(tuple(swing_state_outcomes))
-
-    # Count frequencies of each outcome
-    outcome_counts = Counter(results)
-
-    # Convert to DataFrame
-    outcome_df = pd.DataFrame(outcome_counts.items(), columns=['Outcome', 'Counts'])
-
-    # Calculate percentages
-    outcome_df['Percentage'] = (outcome_df['Counts'] / num_simulations) * 100
-
-    # Sort by percentage and normalize to sum to 100%
-    outcome_df = outcome_df.sort_values(by='Percentage', ascending=False).reset_index(drop=True)
-    outcome_df['Percentage'] = outcome_df['Percentage'] / outcome_df['Percentage'].sum() * 100
-
-    # Ensure that the percentages sum to 100%
-    total_percentage = outcome_df['Percentage'].sum()
-    if total_percentage < 100:
-        outcome_df.loc[outcome_df.index[-1], 'Percentage'] += 100 - total_percentage
-
-    return outcome_df
 
 
 if __name__ == '__main__':
@@ -505,7 +457,7 @@ if __name__ == '__main__':
         print("SIMULATION END   --> ")
         print("")
     print("##### COCONUT TREE #####")
-    print(coconut_tree(df_pivot, 1000))
+    # print(coconut_tree(df_pivot, 1000))
     # Print tables
     # print_tables(df_summary, top_n=10)
     print_swing_states_won(df_pivot, swing_states={'North Carolina', 'Pennsylvania', 'Georgia', 'Wisconsin', 'Michigan',
