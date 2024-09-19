@@ -456,7 +456,7 @@ if __name__ == '__main__':
         print(df_summary)
         print("SIMULATION END   --> ")
         print("")
-    print("##### COCONUT TREE #####")
+    # print("##### COCONUT TREE #####")
     # print(coconut_tree(df_pivot, 1000))
     # Print tables
     # print_tables(df_summary, top_n=10)
