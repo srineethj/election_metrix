@@ -187,6 +187,18 @@ def construct_import(data):
 
     print("---> LAST UPDATE: " + str(max_date))
 
+    last_poll = df_filt.sort_values(by='end_date', ascending=False).iloc[0]
+
+    # Extract the category, pollster, and end_date from the most recent poll
+    category = last_poll['state']
+    pollster = last_poll['pollster']
+    end_date = last_poll['end_date']
+
+    # Print the results
+    print(f"     STATE: \t {category}")
+    print(f"     POLLSTER: \t {pollster}")
+    print(f"     END DATE: \t {end_date}")
+
     df_filt['candidate_name'] = df_filt['candidate_name'].replace('Joe Biden', 'Kamala Harris')
     df_filt = df_filt[df_filt['candidate_name'].isin(['Donald Trump', 'Kamala Harris'])]
 
@@ -443,28 +455,33 @@ from collections import Counter
 
 if __name__ == '__main__':
     start_time = time.time()
-    data = "https://projects.fivethirtyeight.com/polls/data/president_polls.csv"
-    df_pivot = construct_import(data)
-    MAX = 1
-    for i in range(0, MAX):
-        num_simulations = random.randint(5000, 9999)
+    try:
+        data = "https://projects.fivethirtyeight.com/polls/data/president_polls.csv"
+        df_pivot = construct_import(data)
+        MAX = 1
+        for i in range(0, MAX):
+            num_simulations = random.randint(5000, 9999)
+            print("")
+            print("ROUND " + str(i + 1) + " OUT OF " + str(MAX))
+            print("SIMULATION START --> ")
+            df_summary = simulate_elections(df_pivot, num_simulations)
+            print(f"Simulation where n =", num_simulations)
+            print(df_summary)
+            print("SIMULATION END   --> ")
+            print("")
+        # print("##### COCONUT TREE #####")
+        # print(coconut_tree(df_pivot, 1000))
+        # Print tables
+        # print_tables(df_summary, top_n=10)
+        print_swing_states_won(df_pivot, swing_states={'North Carolina', 'Pennsylvania', 'Georgia', 'Wisconsin', 'Michigan',
+                                                       'Arizona', 'Minnesota', 'Nevada'})
+        shapefile_path = 'states/ne_110m_admin_1_states_provinces.shp'
+        # generate_electoral_globe(df_pivot, shapefile_path)
+        end_time = time.time()
+        elapsed_time = end_time - start_time
         print("")
-        print("ROUND " + str(i + 1) + " OUT OF " + str(MAX))
-        print("SIMULATION START --> ")
-        df_summary = simulate_elections(df_pivot, num_simulations)
-        print(f"Simulation where n =", num_simulations)
-        print(df_summary)
-        print("SIMULATION END   --> ")
-        print("")
-    # print("##### COCONUT TREE #####")
-    # print(coconut_tree(df_pivot, 1000))
-    # Print tables
-    # print_tables(df_summary, top_n=10)
-    print_swing_states_won(df_pivot, swing_states={'North Carolina', 'Pennsylvania', 'Georgia', 'Wisconsin', 'Michigan',
-                                                   'Arizona', 'Minnesota', 'Nevada'})
-    shapefile_path = 'states/ne_110m_admin_1_states_provinces.shp'
-    # generate_electoral_globe(df_pivot, shapefile_path)
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    print("")
-    print(f"TOTAL PROCESS RUNTIME: {elapsed_time:.2f} seconds")
+        print(f"TOTAL PROCESS RUNTIME: {elapsed_time:.2f} seconds")
+
+    except Exception as e:
+        print("ERROR: ---------> " + (str(e)))
+        exit(1)
