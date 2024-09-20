@@ -25,7 +25,7 @@ pollster_set = {}
 
 # Unfortunately coconut pilled, as the kids say
 
-def construct_import(data):
+def construct_import(data, safe_state_data):
     print("---> CONSTRUCTING IMPORT")
     # Define the states of interest
     states_of_interest = [
@@ -109,65 +109,21 @@ def construct_import(data):
         'Error Favored Democrats': [0, 67, 50, 50, 40, 25, 80, 33, 44, 60, 39, 27, 50, 50, 71, 30, 0, 14, 19]
     }
 
-    DC_dummy_data = {
-        'poll_id': [74812, 74812],
-        'pollster_id': [241, 241],
-        'pollster': ['Ipsos', 'Ipsos'],
-        'sponsor_ids': [71, 71],
-        'sponsors': ['Reuters', 'Reuters'],
-        'display_name': ['Ipsos', 'Ipsos'],
-        'pollster_rating_id': [154, 154],
-        'pollster_rating_name': ['Ipsos', 'Ipsos'],
-        'numeric_grade': [2.8, 2.8],
-        'pollscore': [-0.9, -0.9],
-        'methodology': ['Probability Panel', 'Probability Panel'],
-        'transparency_score': ['', ''],
-        'state': ['District of Columbia', 'District of Columbia'],
-        'start_date': ['9/12/24', '9/12/24'],
-        'end_date': ['9/12/24', '9/12/24'],
-        'sponsor_candidate_id': ['', ''],
-        'sponsor_candidate': ['', ''],
-        'sponsor_candidate_party': ['', ''],
-        'endorsed_candidate_id': [142393, 142393],
-        'endorsed_candidate_name': ['Kamala Harris', 'Donald Trump'],
-        'endorsed_candidate_party': ['DEM', 'REP'],
-        'question_id': ['', ''],
-        'sample_size': [1107, 1107],
-        'population': ['', ''],
-        'subpopulation': ['', ''],
-        'population_full': ['', ''],
-        'tracking': ['', ''],
-        'created_at': ['5/19/21 8:57', '5/19/21 8:57'],
-        'notes': ['quarter sample', 'quarter sample'],
-        'source': ['538', '538'],
-        'internal': [8914, 8914],
-        'partisan': [2024, 2024],
-        'race_id': ['U.S. President', 'U.S. President'],
-        'cycle': [0, 0],
-        'office_type': ['', ''],
-        'seat_number': ['', ''],
-        'seat_name': ['', ''],
-        'election_date': ['11/5/24', '11/5/24'],
-        'stage': ['general', 'general'],
-        'nationwide_batch': [False, False],
-        'ranked_choice_reallocated': [False, False],
-        'ranked_choice_round': ['', ''],
-        'party': ['DEM', 'REP'],
-        'answer': ['Harris', 'Trump'],
-        'candidate_id': [19368, 16640],
-        'candidate_name': ['Kamala Harris', 'Donald Trump'],
-        'pct': [90, 10]
-    }
-
-    dc_poll_df = pd.DataFrame(DC_dummy_data)
+    safe_state_df = pd.read_csv(safe_state_data)
     # Load the CSV data into a pandas DataFrame
     df = pd.read_csv(data)
     print("\033[92m---> DATA IMPORTED SUCCESSFULLY\033[0m")
+    df = pd.concat([df, safe_state_df], axis=0, ignore_index=True)
+    # print(df)
     df_filt = df[columns_to_keep].copy()
 
+    michigan_polls = df_filt[df_filt['state'] == 'Michigan']
+    print(michigan_polls)
+
     ## add DC dummy data :eyeroll:
-    df_filt = df_filt._append(dc_poll_df, ignore_index=True)
+    # df_filt = df_filt._append(dc_poll_df, ignore_index=True)
     # print(df_filt)
+
     print("---> APPLIED CORRECTIONS FOR SAFE STATES")
 
     df_filt['state'] = df_filt['state'].fillna('**National')
@@ -211,7 +167,7 @@ def construct_import(data):
     df_filt['Error Favored Republicans'] = df_filt['Error Favored Republicans'].fillna('0')
     df_filt['Error Favored Democrats'] = df_filt['Error Favored Democrats'].fillna('0')
 
-   # print(df_filt)
+    # print(df_filt)
     print('---> CREATED poll_data_corrected.csv')
     df_filt.to_csv('poll_data_corrected.csv', index=False)
     df_filt = calculate_weights(df_filt)
@@ -244,7 +200,9 @@ def construct_import(data):
     df_winner['electoral_votes'] = df_winner['state'].map(electoral_votes)
 
     # Calculate total electoral votes per candidate
-    electoral_tally = df_winner.groupby('candidate_name')['electoral_votes'].sum().reset_index()
+    electoral_tally = df_pivot.groupby('winner')['electoral_votes'].sum().reset_index()
+
+    # electoral_tally = df_winner.groupby('candidate_name')['electoral_votes'].sum().reset_index()
     electoral_tally = electoral_tally.rename(columns={'electoral_votes': 'total_electoral_votes'})
 
     # Output results
@@ -284,7 +242,7 @@ def calculate_weights(df):
     print("---> CALCULATING WEIGHTS")
     print("")
     # Default sample size if missing
-    df['sample_size'] = df['sample_size'].fillna(100)
+    df['sample_size'] = df['sample_size'].fillna(500)
     df['numeric_grade'] = df['numeric_grade'].fillna(1)
 
     # Convert end_date to datetime if it's not already
@@ -321,6 +279,8 @@ def sanity_checks(df):
     else:
         print("---> \033[92mEC COUNT CHECKS PASSED -> 538 TOTAL\033[0m")
         #print("\033[92m---> DATA IMPORTED SUCCESSFULLY\033[0m")
+
+
 def generate_electoral_globe(df_pivot, shapefile_path):
     pass
     # # Load US state boundaries from the downloaded shapefile
@@ -374,6 +334,12 @@ def generate_electoral_globe(df_pivot, shapefile_path):
 def simulate_elections(df_pivot, num_simulations=1000):
     # Initialize results list
     results = []
+    harris_swing_state_wins = {state: 0 for state in
+                               ['Pennsylvania', 'Wisconsin', 'Arizona', 'Georgia', 'Michigan', 'Nevada',
+                                'North Carolina']}
+    trump_swing_state_wins = {state: 0 for state in
+                              ['Pennsylvania', 'Wisconsin', 'Arizona', 'Georgia', 'Michigan', 'Nevada',
+                               'North Carolina']}
 
     # Define the threshold to win the election
     WINNING_THRESHOLD = 270
@@ -390,8 +356,12 @@ def simulate_elections(df_pivot, num_simulations=1000):
         for _, row in df_pivot.iterrows():
             if np.random.rand() < row['win_percent_harris'] / 100:
                 electoral_votes['Kamala Harris'] += row['electoral_votes']
+                if row['state'] in harris_swing_state_wins:
+                    harris_swing_state_wins[row['state']] += 1
             else:
                 electoral_votes['Donald Trump'] += row['electoral_votes']
+                if row['state'] in trump_swing_state_wins:
+                    trump_swing_state_wins[row['state']] += 1
 
         # Store the result
         results.append(electoral_votes)
@@ -406,6 +376,17 @@ def simulate_elections(df_pivot, num_simulations=1000):
     # Calculate the percentage chance of each outcome
     df_results_summary = df_results.groupby('Outcome').size().reset_index(name='Counts')
     df_results_summary['Percentage'] = (df_results_summary['Counts'] / num_simulations) * 100
+
+    final_harris_swing_wins = [state for state, count in harris_swing_state_wins.items() if count > num_simulations / 2]
+    final_trump_swing_wins = [state for state, count in trump_swing_state_wins.items() if count > num_simulations / 2]
+
+    summary_table = pd.DataFrame({
+        'Candidate': ['Donald Trump', 'Kamala Harris'],
+        'Swing States Won': [final_trump_swing_wins, final_harris_swing_wins]
+    })
+
+    df_results_summary = pd.concat([df_results_summary, summary_table], axis=1)
+    df_results_summary = df_results_summary.drop('Candidate', axis=1)
 
     return df_results_summary
 
@@ -448,16 +429,16 @@ def print_swing_states_won(df_pivot, swing_states):
     print("REP SWING        --> ")
     print(trump_won)
 
+
 from itertools import product
 from collections import Counter
-
-
 
 if __name__ == '__main__':
     start_time = time.time()
     try:
         data = "https://projects.fivethirtyeight.com/polls/data/president_polls.csv"
-        df_pivot = construct_import(data)
+        safe_data = "safe_state_data.csv"
+        df_pivot = construct_import(data, safe_data)
         MAX = 1
         for i in range(0, MAX):
             num_simulations = random.randint(5000, 9999)
@@ -474,7 +455,7 @@ if __name__ == '__main__':
         # Print tables
         # print_tables(df_summary, top_n=10)
         print_swing_states_won(df_pivot, swing_states={'North Carolina', 'Pennsylvania', 'Georgia', 'Wisconsin', 'Michigan',
-                                                       'Arizona', 'Minnesota', 'Nevada'})
+                                                       'Arizona', 'Michigan', 'Nevada'})
         shapefile_path = 'states/ne_110m_admin_1_states_provinces.shp'
         # generate_electoral_globe(df_pivot, shapefile_path)
         end_time = time.time()
