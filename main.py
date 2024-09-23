@@ -9,6 +9,10 @@ import time
 import openai
 
 import geopandas as gpd
+import plotly.express as px
+import pandas as pd
+
+import geopandas as gpd
 import matplotlib.pyplot as plt
 import contextily as ctx
 
@@ -238,6 +242,39 @@ def calculate_weighted_sd(poll_data):
     return np.mean(weighted_sds)  # Average SD for the model
 
 
+# def calculate_weights(df):
+#     print("---> CALCULATING WEIGHTS")
+#     print("")
+#     # Default sample size if missing
+#     df['sample_size'] = df['sample_size'].fillna(500)
+#     df['numeric_grade'] = df['numeric_grade'].fillna(1)
+#
+#     # Convert end_date to datetime if it's not already
+#     df['end_date'] = pd.to_datetime(df['end_date'])
+#
+#     # Calculate days since the earliest end_date for weighting
+#     min_date = df['end_date'].min()
+#     df['days_since'] = (df['end_date'] - min_date).dt.days
+#
+#     # Normalize days_since to use as a weight (more recent dates get higher weights)
+#     max_days = df['days_since'].max()
+#     df['recency_weight'] = df['days_since'] / max_days
+#
+#     # Pollster counts to calculate base weight for each pollster (inverse of frequency)
+#     pollster_counts = df['pollster'].value_counts()
+#     df['weight'] = df['pollster'].map(pollster_counts).apply(lambda x: 1 / x)
+#
+#     # Adjust weight for small or large sample sizes
+#     df['weight'] *= df['sample_size'] / df['sample_size'].mean()
+#
+#     # Adjust weight based on numeric_grade, assuming higher grade (3) means higher trustworthiness
+#     df['weight'] *= df['numeric_grade'] / df['numeric_grade'].mean()
+#
+#     # Incorporate recency weight
+#     df['weight'] *= df['recency_weight']
+#
+#     return df
+
 def calculate_weights(df):
     print("---> CALCULATING WEIGHTS")
     print("")
@@ -249,16 +286,17 @@ def calculate_weights(df):
     df['end_date'] = pd.to_datetime(df['end_date'])
 
     # Calculate days since the earliest end_date for weighting
-    min_date = df['end_date'].min()
-    df['days_since'] = (df['end_date'] - min_date).dt.days
+    reference_date = df['end_date'].min()
+    df['days_from_reference'] = (reference_date - df['end_date']).dt.days
 
-    # Normalize days_since to use as a weight (more recent dates get higher weights)
-    max_days = df['days_since'].max()
-    df['recency_weight'] = df['days_since'] / max_days
+    decay_factor = 1
+    df['recency_weight'] = np.exp(-decay_factor * df['days_from_reference'])
+
+    df['weight'] =  df['recency_weight']
 
     # Pollster counts to calculate base weight for each pollster (inverse of frequency)
-    pollster_counts = df['pollster'].value_counts()
-    df['weight'] = df['pollster'].map(pollster_counts).apply(lambda x: 1 / x)
+    # pollster_counts = df['pollster'].value_counts()
+    # df['weight'] = df['pollster'].map(pollster_counts).apply(lambda x: 1 / x)
 
     # Adjust weight for small or large sample sizes
     df['weight'] *= df['sample_size'] / df['sample_size'].mean()
@@ -272,6 +310,7 @@ def calculate_weights(df):
     return df
 
 
+
 def sanity_checks(df):
     total_electoral_votes = df['total_electoral_votes'].sum()
     if total_electoral_votes != 538:
@@ -281,54 +320,121 @@ def sanity_checks(df):
         #print("\033[92m---> DATA IMPORTED SUCCESSFULLY\033[0m")
 
 
+# def generate_electoral_globe(df_pivot, shapefile_path):
+#     pass
+#     # # Load US state boundaries from the downloaded shapefile
+#     # usa_states = gpd.read_file(shapefile_path)
+#     #
+#     # # Filter to include only mainland US states
+#     # usa_states = usa_states[usa_states['admin'] == 'United States of America'].copy()
+#     #
+#     # # Ensure both dataframes have matching state names
+#     # df_pivot['state'] = df_pivot['state'].replace({
+#     #     'Georgia': 'Georgia',
+#     #     'Michigan': 'Michigan',
+#     #     'Wisconsin': 'Wisconsin',
+#     #     'North Carolina': 'North Carolina',
+#     #     'Pennsylvania': 'Pennsylvania',
+#     #     'Arizona': 'Arizona',
+#     #     'Nevada': 'Nevada',
+#     #     'Virginia': 'Virginia'
+#     #     # Add other state mappings if necessary
+#     # })
+#     #
+#     # # Merge the df_pivot data with the usa_states GeoDataFrame on the state name
+#     # electoral_map = usa_states.merge(df_pivot, left_on='name', right_on='state', how='left')
+#     #
+#     # # Set up the color mapping based on the winner column
+#     # electoral_map['winner_color'] = electoral_map['winner'].map({
+#     #     'Kamala Harris': 'blue',
+#     #     'Donald Trump': 'red'
+#     # })
+#     #
+#     # # Set up the projection for the globe
+#     # projection = ccrs.Orthographic(central_longitude=-100, central_latitude=45)  # Adjust as needed for the US
+#     #
+#     # # Plot the electoral map on a globe projection
+#     # fig, ax = plt.subplots(1, 1, figsize=(10, 10), subplot_kw={'projection': projection})
+#     #
+#     # # Add coastlines and country borders for context
+#     # ax.add_feature(cfeature.COASTLINE)
+#     # ax.add_feature(cfeature.BORDERS)
+#     #
+#     # # Plot states, coloring them by the winner
+#     # for idx, state in electoral_map.iterrows():
+#     #     ax.add_geometries([state['geometry']], crs=ccrs.PlateCarree(),
+#     #                       facecolor=state['winner_color'], edgecolor='black')
+#     #
+#     # # Set the title and display the map
+#     # plt.title('2024 US Electoral Map on a Globe', fontsize=18)
+#     # plt.show()
+
 def generate_electoral_globe(df_pivot, shapefile_path):
-    pass
-    # # Load US state boundaries from the downloaded shapefile
-    # usa_states = gpd.read_file(shapefile_path)
-    #
-    # # Filter to include only mainland US states
-    # usa_states = usa_states[usa_states['admin'] == 'United States of America'].copy()
-    #
-    # # Ensure both dataframes have matching state names
-    # df_pivot['state'] = df_pivot['state'].replace({
-    #     'Georgia': 'Georgia',
-    #     'Michigan': 'Michigan',
-    #     'Wisconsin': 'Wisconsin',
-    #     'North Carolina': 'North Carolina',
-    #     'Pennsylvania': 'Pennsylvania',
-    #     'Arizona': 'Arizona',
-    #     'Nevada': 'Nevada',
-    #     'Virginia': 'Virginia'
-    #     # Add other state mappings if necessary
-    # })
-    #
-    # # Merge the df_pivot data with the usa_states GeoDataFrame on the state name
-    # electoral_map = usa_states.merge(df_pivot, left_on='name', right_on='state', how='left')
-    #
-    # # Set up the color mapping based on the winner column
-    # electoral_map['winner_color'] = electoral_map['winner'].map({
-    #     'Kamala Harris': 'blue',
-    #     'Donald Trump': 'red'
-    # })
-    #
-    # # Set up the projection for the globe
-    # projection = ccrs.Orthographic(central_longitude=-100, central_latitude=45)  # Adjust as needed for the US
-    #
-    # # Plot the electoral map on a globe projection
-    # fig, ax = plt.subplots(1, 1, figsize=(10, 10), subplot_kw={'projection': projection})
-    #
-    # # Add coastlines and country borders for context
-    # ax.add_feature(cfeature.COASTLINE)
-    # ax.add_feature(cfeature.BORDERS)
-    #
-    # # Plot states, coloring them by the winner
-    # for idx, state in electoral_map.iterrows():
-    #     ax.add_geometries([state['geometry']], crs=ccrs.PlateCarree(),
-    #                       facecolor=state['winner_color'], edgecolor='black')
-    #
-    # # Set the title and display the map
-    # plt.title('2024 US Electoral Map on a Globe', fontsize=18)
-    # plt.show() 
+    # Load US state boundaries from the downloaded shapefile
+    usa_states = gpd.read_file(shapefile_path)
+
+    # Filter to include only mainland US states
+    usa_states = usa_states[usa_states['admin'] == 'United States of America'].copy()
+
+    # Ensure both dataframes have matching state names
+    df_pivot['state'] = df_pivot['state'].replace({
+        'Georgia': 'Georgia',
+        'Michigan': 'Michigan',
+        'Wisconsin': 'Wisconsin',
+        'North Carolina': 'North Carolina',
+        'Pennsylvania': 'Pennsylvania',
+        'Arizona': 'Arizona',
+        'Nevada': 'Nevada',
+        'Virginia': 'Virginia'
+        # Add other state mappings if necessary
+    })
+
+    # Merge the df_pivot data with the usa_states GeoDataFrame on the state name
+    electoral_map = usa_states.merge(df_pivot, left_on='name', right_on='state', how='left')
+
+    # Add a color column for the winner
+    electoral_map['winner_color'] = electoral_map['winner'].map({
+        'Kamala Harris': 'blue',
+        'Donald Trump': 'red'
+    })
+
+    # Convert GeoDataFrame to GeoJSON format for Plotly
+    geojson_data = electoral_map.__geo_interface__
+
+    # Create an interactive choropleth map with Plotly
+    fig = px.choropleth_mapbox(
+        electoral_map,
+        geojson=geojson_data,
+        locations='state',                # Column in df_pivot to match with the geojson 'state'
+        featureidkey='properties.name',   # The state names in the GeoDataFrame
+        color='winner',                   # Color states by the winner
+        hover_name='state',               # Display state name on hover
+        hover_data={
+            'state': True,                # Show state names
+            'win_percent_harris': True,   # Show win percentage for Kamala Harris on hover
+            'win_percent_trump': True,    # Show win percentage for Donald Trump on hover
+            'winner': True                # Show winner on hover
+        },
+        color_discrete_map={
+            'Kamala Harris': 'blue',
+            'Donald Trump': 'red'
+        },
+        center={"lat": 37.0902, "lon": -95.7129},  # Center on the US
+        mapbox_style="carto-positron",             # Map style
+        zoom=3,                                   # Initial zoom level
+        opacity=0.6                               # Set opacity for better visibility
+    )
+
+    # Set title and layout
+    fig.update_layout(
+        title_text='2024 US Electoral Map with Win Percentages',
+        margin={"r":0,"t":0,"l":0,"b":0}
+    )
+
+    # Show the figure
+    fig.show()
+
+
 
 
 def simulate_elections(df_pivot, num_simulations=1000):
@@ -457,7 +563,7 @@ if __name__ == '__main__':
         print_swing_states_won(df_pivot, swing_states={'North Carolina', 'Pennsylvania', 'Georgia', 'Wisconsin', 'Michigan',
                                                        'Arizona', 'Michigan', 'Nevada'})
         shapefile_path = 'states/ne_110m_admin_1_states_provinces.shp'
-        # generate_electoral_globe(df_pivot, shapefile_path)
+        generate_electoral_globe(df_pivot, shapefile_path)
         end_time = time.time()
         elapsed_time = end_time - start_time
         print("")

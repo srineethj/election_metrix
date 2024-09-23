@@ -1,56 +1,56 @@
 state,candidate_name,weighted_avg_pct,electoral_votes
-**National,Kamala Harris,43.31531244985606,0
-Alabama,Donald Trump,55.66288625825625,9
-Alaska,Donald Trump,47.160811451633094,3
-Arizona,Donald Trump,44.680477754405125,11
-Arkansas,Donald Trump,54.910997083288315,6
-California,Kamala Harris,54.890448901071224,54
-Colorado,Kamala Harris,46.85181673388713,10
+**National,Kamala Harris,53.415547846658846,0
+Alabama,Donald Trump,55.6,9
+Alaska,Donald Trump,47.000000000590056,3
+Arizona,Donald Trump,48.834262346949096,11
+Arkansas,Donald Trump,55.0,6
+California,Kamala Harris,63.997847195395806,54
+Colorado,Kamala Harris,52.50000000461103,10
 Connecticut,Kamala Harris,49.1,7
-Delaware,Kamala Harris,46.0,3
+Delaware,Kamala Harris,45.99999999999999,3
 District of Columbia,Kamala Harris,90.0,3
-Florida,Donald Trump,47.985071793451,30
-Georgia,Donald Trump,46.94526041257234,16
-Hawaii,Kamala Harris,46.30588115338607,4
-Idaho,Donald Trump,53.79999999999999,4
-Illinois,Kamala Harris,51.875797830868756,19
-Indiana,Donald Trump,52.15485224235514,11
-Iowa,Donald Trump,48.16073057069099,6
+Florida,Donald Trump,49.520000002555186,30
+Georgia,Donald Trump,47.69370373695467,16
+Hawaii,Kamala Harris,49.34431523802969,4
+Idaho,Donald Trump,53.8,4
+Illinois,Kamala Harris,57.8,19
+Indiana,Donald Trump,57.899999999591394,11
+Iowa,Donald Trump,46.99999999999999,6
 Kansas,Donald Trump,43.8,6
 Kentucky,Donald Trump,51.5,8
-Louisiana,Donald Trump,50.02456850976574,8
-Maine,Kamala Harris,48.39221023121808,2
-Maine CD-1,Kamala Harris,58.358343994058956,1
-Maine CD-2,Donald Trump,47.56314321144259,1
-Maryland,Kamala Harris,57.22343019461615,10
-Massachusetts,Kamala Harris,49.17273371388652,11
-Michigan,Donald Trump,44.784356045187565,15
-Minnesota,Kamala Harris,47.502108311945385,10
+Louisiana,Donald Trump,50.00003070545678,8
+Maine,Kamala Harris,50.0,2
+Maine CD-1,Kamala Harris,58.0,1
+Maine CD-2,Donald Trump,49.0,1
+Maryland,Kamala Harris,61.63221120967413,10
+Massachusetts,Kamala Harris,62.0,11
+Michigan,Kamala Harris,50.95862568984872,15
+Minnesota,Kamala Harris,49.5600000239042,10
 Mississippi,Donald Trump,50.0,6
-Missouri,Donald Trump,53.95441236072738,10
-Montana,Donald Trump,54.74017377570015,4
-Nebraska,Donald Trump,50.949198474803886,4
-Nebraska CD-2,Kamala Harris,46.49899929444547,1
-Nevada,Donald Trump,44.426358063976465,6
-New Hampshire,Kamala Harris,47.964890775650595,4
-New Jersey,Kamala Harris,50.7353820154728,14
-New Mexico,Kamala Harris,48.080166453050616,5
-New York,Kamala Harris,52.19723809389418,28
-North Carolina,Donald Trump,46.04388836422686,16
-North Dakota,Donald Trump,61.28421191230825,3
-Ohio,Donald Trump,50.04018993069394,17
-Oklahoma,Donald Trump,56.031258672812484,7
-Oregon,Kamala Harris,46.95050383579575,8
-Pennsylvania,Kamala Harris,47.033400898192575,19
-Rhode Island,Kamala Harris,43.78924347714621,4
-South Carolina,Donald Trump,50.219833354443345,9
-South Dakota,Donald Trump,50.020532996174964,3
-Tennessee,Donald Trump,52.01472925695544,11
-Texas,Donald Trump,48.06875082334933,40
-Utah,Donald Trump,51.8443457417834,6
-Vermont,Kamala Harris,68.00364969483009,3
-Virginia,Kamala Harris,46.86282396413962,13
-Washington,Kamala Harris,47.88802240381236,12
-West Virginia,Donald Trump,57.84405315770303,4
-Wisconsin,Kamala Harris,46.953298191775374,10
+Missouri,Donald Trump,53.13194110300845,10
+Montana,Donald Trump,56.000000000000185,4
+Nebraska,Donald Trump,53.97107678439536,4
+Nebraska CD-2,Kamala Harris,49.00000000069983,1
+Nevada,Kamala Harris,49.33320257899,6
+New Hampshire,Kamala Harris,53.997545573773614,4
+New Jersey,Kamala Harris,90.0,14
+New Mexico,Kamala Harris,48.999999999999986,5
+New York,Kamala Harris,53.49999999999999,28
+North Carolina,Kamala Harris,48.930678422261614,16
+North Dakota,Donald Trump,61.99999999999999,3
+Ohio,Donald Trump,52.15999999949265,17
+Oklahoma,Donald Trump,56.0,7
+Oregon,Kamala Harris,47.00000000000001,8
+Pennsylvania,Kamala Harris,49.814226193504616,19
+Rhode Island,Kamala Harris,58.0,4
+South Carolina,Donald Trump,47.0,9
+South Dakota,Donald Trump,50.0,3
+Tennessee,Donald Trump,63.10000000000001,11
+Texas,Donald Trump,49.5800000048448,40
+Utah,Donald Trump,55.0,6
+Vermont,Kamala Harris,68.5,3
+Virginia,Kamala Harris,50.89639235495925,13
+Washington,Kamala Harris,53.0,12
+West Virginia,Donald Trump,61.00000000000001,4
+Wisconsin,Kamala Harris,49.28218464419105,10
 Wyoming,Donald Trump,52.6,3
