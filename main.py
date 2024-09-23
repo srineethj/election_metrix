@@ -328,7 +328,7 @@ def generate_electoral_globe(df_pivot, shapefile_path):
     #
     # # Set the title and display the map
     # plt.title('2024 US Electoral Map on a Globe', fontsize=18)
-    # plt.show()
+    # plt.show() 
 
 
 def simulate_elections(df_pivot, num_simulations=1000):
