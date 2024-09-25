@@ -1,5 +1,6 @@
 import csv
 import random
+from fpdf import FPDF
 
 import pandas as pd
 import sys
@@ -26,8 +27,8 @@ pd.set_option('display.float_format', '{:.4f}'.format)
 
 pollster_set = {}
 
-
 # Unfortunately coconut pilled, as the kids say
+coconut_pilled = True
 
 def construct_import(data, safe_state_data):
     print("---> CONSTRUCTING IMPORT")
@@ -159,8 +160,9 @@ def construct_import(data, safe_state_data):
     print(f"     POLLSTER: \t {pollster}")
     print(f"     END DATE: \t {end_date}")
 
-    df_filt['candidate_name'] = df_filt['candidate_name'].replace('Joe Biden', 'Kamala Harris')
-    df_filt = df_filt[df_filt['candidate_name'].isin(['Donald Trump', 'Kamala Harris'])]
+    if coconut_pilled:
+        df_filt['candidate_name'] = df_filt['candidate_name'].replace('Joe Biden', 'Kamala Harris')
+        df_filt = df_filt[df_filt['candidate_name'].isin(['Donald Trump', 'Kamala Harris'])]
 
     bias_df = pd.DataFrame(bias_data)
 
@@ -279,7 +281,7 @@ def calculate_weights(df):
     print("---> CALCULATING WEIGHTS")
     print("")
     # Default sample size if missing
-    df['sample_size'] = df['sample_size'].fillna(500)
+    df['sample_size'] = df['sample_size'].fillna(100)
     df['numeric_grade'] = df['numeric_grade'].fillna(1)
 
     # Convert end_date to datetime if it's not already
@@ -289,10 +291,11 @@ def calculate_weights(df):
     reference_date = df['end_date'].min()
     df['days_from_reference'] = (reference_date - df['end_date']).dt.days
 
-    decay_factor = 1
+    decay_factor = 0.0025
+    # decay_factor = 1
     df['recency_weight'] = np.exp(-decay_factor * df['days_from_reference'])
 
-    df['weight'] =  df['recency_weight']
+    df['weight'] = df['recency_weight']
 
     # Pollster counts to calculate base weight for each pollster (inverse of frequency)
     # pollster_counts = df['pollster'].value_counts()
@@ -535,12 +538,21 @@ def print_swing_states_won(df_pivot, swing_states):
     print("REP SWING        --> ")
     print(trump_won)
 
+def pdf_test():
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_xy(0, 0)
+    pdf.set_font('arial', 'B', 13.0)
+    pdf.cell(ln=10, h=5.0, align='L', w=0, txt="Hello", border=0)
+    pdf.output('test.pdf', 'F')
+
 
 from itertools import product
 from collections import Counter
 
 if __name__ == '__main__':
     start_time = time.time()
+
     try:
         data = "https://projects.fivethirtyeight.com/polls/data/president_polls.csv"
         safe_data = "safe_state_data.csv"
@@ -568,6 +580,7 @@ if __name__ == '__main__':
         elapsed_time = end_time - start_time
         print("")
         print(f"TOTAL PROCESS RUNTIME: {elapsed_time:.2f} seconds")
+        pdf_test()
 
     except Exception as e:
         print("ERROR: ---------> " + (str(e)))

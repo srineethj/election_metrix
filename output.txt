@@ -1,0 +1,57 @@
+candidate_name                 state  Donald Trump  Kamala Harris  mean_diff         winner  electoral_votes  win_percent_harris  win_percent_trump
+0                         **National       44.2144        45.3656     1.1512  Kamala Harris                0             57.6077            42.3923
+1                            Alabama       55.8202        31.2453   -24.5750   Donald Trump                9              0.0021            99.9979
+2                             Alaska       49.3210        41.4946    -7.8264   Donald Trump                3              9.6048            90.3952
+3                            Arizona       46.5539        43.7990    -2.7548   Donald Trump               11             32.3067            67.6933
+4                           Arkansas       51.1815        38.2870   -12.8944   Donald Trump                6              1.5814            98.4186
+5                         California       33.1270        53.8433    20.7163  Kamala Harris               54             99.9723             0.0277
+6                           Colorado       38.3262        46.9691     8.6429  Kamala Harris               10             92.5134             7.4866
+7                        Connecticut       36.4872        52.4737    15.9865  Kamala Harris                7             99.6144             0.3856
+8                           Delaware       36.1000        46.0000     9.9000  Kamala Harris                3             95.0529             4.9471
+9               District of Columbia       10.0000        90.0000    80.0000  Kamala Harris                3            100.0000             0.0000
+10                           Florida       48.6256        42.5191    -6.1065   Donald Trump               30             15.4398            84.5602
+11                           Georgia       47.1006        43.9226    -3.1779   Donald Trump               16             29.8175            70.1825
+12                            Hawaii       31.1349        45.3595    14.2246  Kamala Harris                4             99.1124             0.8876
+13                             Idaho       53.8000        24.6000   -29.2000   Donald Trump                4              0.0001            99.9999
+14                          Illinois       38.7704        50.4595    11.6891  Kamala Harris               19             97.4303             2.5697
+15                           Indiana       55.4655        37.2804   -18.1851   Donald Trump               11              0.1219            99.8781
+16                              Iowa       48.1471        38.2662    -9.8809   Donald Trump                6              4.9798            95.0202
+17                            Kansas       43.8000        38.8000    -5.0000   Donald Trump                6             20.2328            79.7672
+18                          Kentucky       51.5000        29.4000   -22.1000   Donald Trump                8              0.0115            99.9885
+19                         Louisiana       50.4257        35.1808   -15.2449   Donald Trump                8              0.5530            99.4470
+20                             Maine       41.2715        50.2801     9.0086  Kamala Harris                2             93.3378             6.6622
+21                        Maine CD-1       35.5429        59.5767    24.0337  Kamala Harris                1             99.9969             0.0031
+22                        Maine CD-2       46.9849        45.9711    -1.0137   Donald Trump                1             43.2915            56.7085
+23                          Maryland       32.6699        57.6513    24.9814  Kamala Harris               10             99.9984             0.0016
+24                     Massachusetts       30.1441        55.7307    25.5866  Kamala Harris               11             99.9990             0.0010
+25                          Michigan       45.1662        45.4719     0.3056  Kamala Harris               15             52.0312            47.9688
+26                         Minnesota       42.7955        47.6257     4.8302  Kamala Harris               10             78.9599            21.0401
+27                       Mississippi       50.0000        35.3000   -14.7000   Donald Trump                6              0.7143            99.2857
+28                          Missouri       52.6656        40.2340   -12.4316   Donald Trump               10              1.9136            98.0864
+29                           Montana       54.8426        37.3613   -17.4813   Donald Trump                4              0.1787            99.8213
+30                          Nebraska       52.2466        37.2271   -15.0195   Donald Trump                4              0.6153            99.3847
+31                     Nebraska CD-2       41.5264        47.9415     6.4151  Kamala Harris                1             85.7505            14.2495
+32                            Nevada       45.9415        43.3404    -2.6012   Donald Trump                6             33.2316            66.7684
+33                     New Hampshire       43.6584        49.6534     5.9950  Kamala Harris                4             84.1145            15.8855
+34                        New Jersey       25.7376        64.2303    38.4927  Kamala Harris               14            100.0000             0.0000
+35                        New Mexico       41.8617        49.2531     7.3914  Kamala Harris                5             89.1008            10.8992
+36                          New York       39.1236        50.3682    11.2446  Kamala Harris               28             96.9541             3.0459
+37                    North Carolina       46.7095        44.5849    -2.1246   Donald Trump               16             36.1631            63.8369
+38                      North Dakota       58.3877        28.6355   -29.7522   Donald Trump                3              0.0000           100.0000
+39                              Ohio       50.3963        40.8926    -9.5038   Donald Trump               17              5.6602            94.3398
+40                          Oklahoma       55.8643        31.7557   -24.1086   Donald Trump                7              0.0029            99.9971
+41                            Oregon       40.7559        45.8079     5.0521  Kamala Harris                8             80.0109            19.9891
+42                      Pennsylvania       46.0857        46.0732    -0.0125   Donald Trump               19             49.9168            50.0832
+43                      Rhode Island       36.3337        51.4790    15.1454  Kamala Harris                4             99.4202             0.5798
+44                    South Carolina       50.3744        32.9078   -17.4666   Donald Trump                9              0.1801            99.8199
+45                      South Dakota       53.3948        28.3965   -24.9983   Donald Trump                3              0.0015            99.9985
+46                         Tennessee       54.0536        29.1351   -24.9185   Donald Trump               11              0.0016            99.9984
+47                             Texas       47.8335        41.7617    -6.0719   Donald Trump               40             15.5774            84.4226
+48                              Utah       51.9250        25.7214   -26.2036   Donald Trump                6              0.0006            99.9994
+49                           Vermont       28.0599        67.1928    39.1329  Kamala Harris                3            100.0000             0.0000
+50                          Virginia       42.3319        45.6880     3.3561  Kamala Harris               13             71.2039            28.7961
+51                        Washington       36.6775        49.7318    13.0544  Kamala Harris               12             98.5212             1.4788
+52                     West Virginia       57.2687        29.6016   -27.6671   Donald Trump                4              0.0002            99.9998
+53                         Wisconsin       45.6598        46.6911     1.0313  Kamala Harris               10             56.8237            43.1763
+54                           Wyoming       52.6000        20.2000   -32.4000   Donald Trump                3              0.0000           100.0000
+ROUND 1 OUT OF 1SIMULATION START --> 
