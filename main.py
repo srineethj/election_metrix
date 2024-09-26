@@ -557,6 +557,7 @@ if __name__ == '__main__':
         data = "https://projects.fivethirtyeight.com/polls/data/president_polls.csv"
         safe_data = "safe_state_data.csv"
         df_pivot = construct_import(data, safe_data)
+        df_pivot.to_csv('df_pivot.csv', index=False)
         MAX = 1
         for i in range(0, MAX):
             num_simulations = random.randint(5000, 9999)
@@ -580,7 +581,6 @@ if __name__ == '__main__':
         elapsed_time = end_time - start_time
         print("")
         print(f"TOTAL PROCESS RUNTIME: {elapsed_time:.2f} seconds")
-        pdf_test()
 
     except Exception as e:
         print("ERROR: ---------> " + (str(e)))
