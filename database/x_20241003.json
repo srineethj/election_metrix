@@ -1,0 +1,506 @@
+{
+  "**National": {
+    "Donald Trump": 44.17796397768852,
+    "Kamala Harris": 45.538784086891475,
+    "electoral_votes": 0,
+    "mean_diff": 1.3608201092029546,
+    "win_percent_harris": 58.97116712667935,
+    "win_percent_trump": 41.02883287332065,
+    "winner": "Kamala Harris"
+  },
+  "Alabama": {
+    "Donald Trump": 55.599999999999994,
+    "Kamala Harris": 29.4,
+    "electoral_votes": 9,
+    "mean_diff": -26.199999999999996,
+    "win_percent_harris": 0.0006307851554811371,
+    "win_percent_trump": 99.9993692148445,
+    "winner": "Donald Trump"
+  },
+  "Alaska": {
+    "Donald Trump": 49.96944196893043,
+    "Kamala Harris": 41.328137486784286,
+    "electoral_votes": 3,
+    "mean_diff": -8.641304482146147,
+    "win_percent_harris": 7.490294901526918,
+    "win_percent_trump": 92.50970509847308,
+    "winner": "Donald Trump"
+  },
+  "Arizona": {
+    "Donald Trump": 46.91693504443869,
+    "Kamala Harris": 44.56601434693822,
+    "electoral_votes": 11,
+    "mean_diff": -2.35092069750047,
+    "win_percent_harris": 34.75955652571948,
+    "win_percent_trump": 65.24044347428053,
+    "winner": "Donald Trump"
+  },
+  "Arkansas": {
+    "Donald Trump": 49.4536339655619,
+    "Kamala Harris": 37.51191056399039,
+    "electoral_votes": 6,
+    "mean_diff": -11.941723401571508,
+    "win_percent_harris": 2.327965175987844,
+    "win_percent_trump": 97.67203482401216,
+    "winner": "Donald Trump"
+  },
+  "California": {
+    "Donald Trump": 33.84284127012505,
+    "Kamala Harris": 56.25643696952439,
+    "electoral_votes": 54,
+    "mean_diff": 22.413595699399337,
+    "win_percent_harris": 99.99063656624973,
+    "win_percent_trump": 0.009363433750264605,
+    "winner": "Kamala Harris"
+  },
+  "Colorado": {
+    "Donald Trump": 39.03935588902801,
+    "Kamala Harris": 48.534487385483665,
+    "electoral_votes": 10,
+    "mean_diff": 9.495131496455656,
+    "win_percent_harris": 94.32347633935856,
+    "win_percent_trump": 5.6765236606414415,
+    "winner": "Kamala Harris"
+  },
+  "Connecticut": {
+    "Donald Trump": 36.07768265933241,
+    "Kamala Harris": 52.053411150367474,
+    "electoral_votes": 7,
+    "mean_diff": 15.975728491035063,
+    "win_percent_harris": 99.61232703870513,
+    "win_percent_trump": 0.3876729612948715,
+    "winner": "Kamala Harris"
+  },
+  "Delaware": {
+    "Donald Trump": 36.44077598256479,
+    "Kamala Harris": 51.71130211406794,
+    "electoral_votes": 3,
+    "mean_diff": 15.270526131503154,
+    "win_percent_harris": 99.45374850322183,
+    "win_percent_trump": 0.5462514967781718,
+    "winner": "Kamala Harris"
+  },
+  "District of Columbia": {
+    "Donald Trump": 10.0,
+    "Kamala Harris": 90.0,
+    "electoral_votes": 3,
+    "mean_diff": 80.0,
+    "win_percent_harris": 100.0,
+    "win_percent_trump": 0.0,
+    "winner": "Kamala Harris"
+  },
+  "Florida": {
+    "Donald Trump": 48.402265472304045,
+    "Kamala Harris": 42.48490061587409,
+    "electoral_votes": 30,
+    "mean_diff": -5.9173648564299555,
+    "win_percent_harris": 16.20107495931094,
+    "win_percent_trump": 83.79892504068907,
+    "winner": "Donald Trump"
+  },
+  "Georgia": {
+    "Donald Trump": 47.24500375802713,
+    "Kamala Harris": 44.88702700287686,
+    "electoral_votes": 16,
+    "mean_diff": -2.3579767551502684,
+    "win_percent_harris": 34.71611713902551,
+    "win_percent_trump": 65.28388286097449,
+    "winner": "Donald Trump"
+  },
+  "Hawaii": {
+    "Donald Trump": 31.112361032180065,
+    "Kamala Harris": 45.340307261429835,
+    "electoral_votes": 4,
+    "mean_diff": 14.22794622924977,
+    "win_percent_harris": 99.11377659324197,
+    "win_percent_trump": 0.8862234067580355,
+    "winner": "Kamala Harris"
+  },
+  "Idaho": {
+    "Donald Trump": 53.8,
+    "Kamala Harris": 24.6,
+    "electoral_votes": 4,
+    "mean_diff": -29.199999999999996,
+    "win_percent_harris": 5.674810724272161e-05,
+    "win_percent_trump": 99.99994325189276,
+    "winner": "Donald Trump"
+  },
+  "Illinois": {
+    "Donald Trump": 37.99244407699168,
+    "Kamala Harris": 48.79435398935061,
+    "electoral_votes": 19,
+    "mean_diff": 10.80190991235893,
+    "win_percent_harris": 96.40948050020802,
+    "win_percent_trump": 3.5905194997919776,
+    "winner": "Kamala Harris"
+  },
+  "Indiana": {
+    "Donald Trump": 54.89839091316993,
+    "Kamala Harris": 40.569163619682904,
+    "electoral_votes": 11,
+    "mean_diff": -14.32922729348703,
+    "win_percent_harris": 0.846545776073879,
+    "win_percent_trump": 99.15345422392612,
+    "winner": "Donald Trump"
+  },
+  "Iowa": {
+    "Donald Trump": 48.518844045478666,
+    "Kamala Harris": 39.37450960812981,
+    "electoral_votes": 6,
+    "mean_diff": -9.144334437348853,
+    "win_percent_harris": 6.374739391403995,
+    "win_percent_trump": 93.62526060859601,
+    "winner": "Donald Trump"
+  },
+  "Kansas": {
+    "Donald Trump": 43.8,
+    "Kamala Harris": 38.8,
+    "electoral_votes": 6,
+    "mean_diff": -5.0,
+    "win_percent_harris": 20.232838096364308,
+    "win_percent_trump": 79.76716190363568,
+    "winner": "Donald Trump"
+  },
+  "Kentucky": {
+    "Donald Trump": 51.5,
+    "Kamala Harris": 29.4,
+    "electoral_votes": 8,
+    "mean_diff": -22.1,
+    "win_percent_harris": 0.011510190833391637,
+    "win_percent_trump": 99.98848980916661,
+    "winner": "Donald Trump"
+  },
+  "Louisiana": {
+    "Donald Trump": 50.43227596631139,
+    "Kamala Harris": 35.175793025266465,
+    "electoral_votes": 8,
+    "mean_diff": -15.256482941044922,
+    "win_percent_harris": 0.5499239251283605,
+    "win_percent_trump": 99.45007607487165,
+    "winner": "Donald Trump"
+  },
+  "Maine": {
+    "Donald Trump": 41.55869946665162,
+    "Kamala Harris": 50.06712785550727,
+    "electoral_votes": 2,
+    "mean_diff": 8.508428388855656,
+    "win_percent_harris": 92.19150396322901,
+    "win_percent_trump": 7.808496036770984,
+    "winner": "Kamala Harris"
+  },
+  "Maine CD-1": {
+    "Donald Trump": 35.77174424684427,
+    "Kamala Harris": 59.74562740255545,
+    "electoral_votes": 1,
+    "mean_diff": 23.973883155711178,
+    "win_percent_harris": 99.99677411219304,
+    "win_percent_trump": 0.0032258878069679753,
+    "winner": "Kamala Harris"
+  },
+  "Maine CD-2": {
+    "Donald Trump": 47.00574886042396,
+    "Kamala Harris": 46.20657036254126,
+    "electoral_votes": 1,
+    "mean_diff": -0.7991784978826999,
+    "win_percent_harris": 44.70190224811353,
+    "win_percent_trump": 55.29809775188647,
+    "winner": "Donald Trump"
+  },
+  "Maryland": {
+    "Donald Trump": 32.42870686171813,
+    "Kamala Harris": 59.691678849504804,
+    "electoral_votes": 10,
+    "mean_diff": 27.26297198778667,
+    "win_percent_harris": 99.99972379217735,
+    "win_percent_trump": 0.00027620782264703436,
+    "winner": "Kamala Harris"
+  },
+  "Massachusetts": {
+    "Donald Trump": 29.672502431646386,
+    "Kamala Harris": 54.89630922587492,
+    "electoral_votes": 11,
+    "mean_diff": 25.223806794228537,
+    "win_percent_harris": 99.99868861866771,
+    "win_percent_trump": 0.0013113813322807033,
+    "winner": "Kamala Harris"
+  },
+  "Michigan": {
+    "Donald Trump": 45.42884446048363,
+    "Kamala Harris": 45.959941190434236,
+    "electoral_votes": 15,
+    "mean_diff": 0.5310967299506046,
+    "win_percent_harris": 53.52667642987379,
+    "win_percent_trump": 46.47332357012621,
+    "winner": "Kamala Harris"
+  },
+  "Minnesota": {
+    "Donald Trump": 43.18266100229418,
+    "Kamala Harris": 47.82833521671922,
+    "electoral_votes": 10,
+    "mean_diff": 4.645674214425036,
+    "win_percent_harris": 78.06171008274931,
+    "win_percent_trump": 21.938289917250685,
+    "winner": "Kamala Harris"
+  },
+  "Mississippi": {
+    "Donald Trump": 50.0,
+    "Kamala Harris": 35.3,
+    "electoral_votes": 6,
+    "mean_diff": -14.700000000000003,
+    "win_percent_harris": 0.7142810735271403,
+    "win_percent_trump": 99.28571892647285,
+    "winner": "Donald Trump"
+  },
+  "Missouri": {
+    "Donald Trump": 52.92153436761413,
+    "Kamala Harris": 40.957621935846575,
+    "electoral_votes": 10,
+    "mean_diff": -11.963912431767554,
+    "win_percent_harris": 2.3076824751140323,
+    "win_percent_trump": 97.69231752488596,
+    "winner": "Donald Trump"
+  },
+  "Montana": {
+    "Donald Trump": 55.504574474629266,
+    "Kamala Harris": 38.61747732854463,
+    "electoral_votes": 4,
+    "mean_diff": -16.887097146084635,
+    "win_percent_harris": 0.24425358384750198,
+    "win_percent_trump": 99.7557464161525,
+    "winner": "Donald Trump"
+  },
+  "Nebraska": {
+    "Donald Trump": 52.50074402753287,
+    "Kamala Harris": 37.87528541686304,
+    "electoral_votes": 4,
+    "mean_diff": -14.625458610669824,
+    "win_percent_harris": 0.7393043954099958,
+    "win_percent_trump": 99.26069560459,
+    "winner": "Donald Trump"
+  },
+  "Nebraska CD-2": {
+    "Donald Trump": 41.8187717553247,
+    "Kamala Harris": 50.25220718761825,
+    "electoral_votes": 1,
+    "mean_diff": 8.43343543229355,
+    "win_percent_harris": 92.00744573110175,
+    "win_percent_trump": 7.992554268898244,
+    "winner": "Kamala Harris"
+  },
+  "Nevada": {
+    "Donald Trump": 46.05499503114519,
+    "Kamala Harris": 44.55484849691087,
+    "electoral_votes": 6,
+    "mean_diff": -1.500146534234318,
+    "win_percent_harris": 40.12842309931673,
+    "win_percent_trump": 59.87157690068328,
+    "winner": "Donald Trump"
+  },
+  "New Hampshire": {
+    "Donald Trump": 43.57135815538637,
+    "Kamala Harris": 49.22035517383088,
+    "electoral_votes": 4,
+    "mean_diff": 5.648997018444511,
+    "win_percent_harris": 82.67755281003899,
+    "win_percent_trump": 17.32244718996101,
+    "winner": "Kamala Harris"
+  },
+  "New Jersey": {
+    "Donald Trump": 31.027471846341626,
+    "Kamala Harris": 56.28369818134275,
+    "electoral_votes": 14,
+    "mean_diff": 25.256226335001124,
+    "win_percent_harris": 99.99871958731416,
+    "win_percent_trump": 0.0012804126858445564,
+    "winner": "Kamala Harris"
+  },
+  "New Mexico": {
+    "Donald Trump": 41.70455878946684,
+    "Kamala Harris": 49.23596384823268,
+    "electoral_votes": 5,
+    "mean_diff": 7.531405058765841,
+    "win_percent_harris": 89.53031188643862,
+    "win_percent_trump": 10.469688113561372,
+    "winner": "Kamala Harris"
+  },
+  "New York": {
+    "Donald Trump": 39.53472385654965,
+    "Kamala Harris": 50.84813782790627,
+    "electoral_votes": 28,
+    "mean_diff": 11.313413971356624,
+    "win_percent_harris": 97.03234706201819,
+    "win_percent_trump": 2.967652937981813,
+    "winner": "Kamala Harris"
+  },
+  "North Carolina": {
+    "Donald Trump": 47.03413307425439,
+    "Kamala Harris": 45.6457443328687,
+    "electoral_votes": 16,
+    "mean_diff": -1.3883887413856897,
+    "win_percent_harris": 40.850276139478346,
+    "win_percent_trump": 59.149723860521654,
+    "winner": "Donald Trump"
+  },
+  "North Dakota": {
+    "Donald Trump": 56.41569233594314,
+    "Kamala Harris": 32.20448525262369,
+    "electoral_votes": 3,
+    "mean_diff": -24.21120708331945,
+    "win_percent_harris": 0.002727776597830243,
+    "win_percent_trump": 99.99727222340216,
+    "winner": "Donald Trump"
+  },
+  "Ohio": {
+    "Donald Trump": 50.85595051559446,
+    "Kamala Harris": 43.114571054516965,
+    "electoral_votes": 17,
+    "mean_diff": -7.741379461077493,
+    "win_percent_harris": 9.848542204449718,
+    "win_percent_trump": 90.15145779555029,
+    "winner": "Donald Trump"
+  },
+  "Oklahoma": {
+    "Donald Trump": 55.91993184163081,
+    "Kamala Harris": 30.51226625195006,
+    "electoral_votes": 7,
+    "mean_diff": -25.407665589680754,
+    "win_percent_harris": 0.0011447387301397162,
+    "win_percent_trump": 99.99885526126985,
+    "winner": "Donald Trump"
+  },
+  "Oregon": {
+    "Donald Trump": 40.28400601086817,
+    "Kamala Harris": 45.3477196008844,
+    "electoral_votes": 8,
+    "mean_diff": 5.063713590016235,
+    "win_percent_harris": 80.06519597136615,
+    "win_percent_trump": 19.934804028633845,
+    "winner": "Kamala Harris"
+  },
+  "Pennsylvania": {
+    "Donald Trump": 46.326428178340734,
+    "Kamala Harris": 46.34125137015195,
+    "electoral_votes": 19,
+    "mean_diff": 0.014823191811217384,
+    "win_percent_harris": 50.098559865472744,
+    "win_percent_trump": 49.901440134527256,
+    "winner": "Kamala Harris"
+  },
+  "Rhode Island": {
+    "Donald Trump": 38.19619262818479,
+    "Kamala Harris": 52.03061098534629,
+    "electoral_votes": 4,
+    "mean_diff": 13.834418357161503,
+    "win_percent_harris": 98.94373168562728,
+    "win_percent_trump": 1.0562683143727103,
+    "winner": "Kamala Harris"
+  },
+  "South Carolina": {
+    "Donald Trump": 50.46633405413164,
+    "Kamala Harris": 40.34879090493088,
+    "electoral_votes": 9,
+    "mean_diff": -10.117543149200763,
+    "win_percent_harris": 4.587313625571044,
+    "win_percent_trump": 95.41268637442896,
+    "winner": "Donald Trump"
+  },
+  "South Dakota": {
+    "Donald Trump": 50.17677825973252,
+    "Kamala Harris": 31.812482606042558,
+    "electoral_votes": 3,
+    "mean_diff": -18.364295653689965,
+    "win_percent_harris": 0.11040423509078867,
+    "win_percent_trump": 99.88959576490922,
+    "winner": "Donald Trump"
+  },
+  "Tennessee": {
+    "Donald Trump": 53.44434188319499,
+    "Kamala Harris": 28.92327099520973,
+    "electoral_votes": 11,
+    "mean_diff": -24.521070887985257,
+    "win_percent_harris": 0.002186393841397099,
+    "win_percent_trump": 99.9978136061586,
+    "winner": "Donald Trump"
+  },
+  "Texas": {
+    "Donald Trump": 47.92048239294285,
+    "Kamala Harris": 41.943784039299246,
+    "electoral_votes": 40,
+    "mean_diff": -5.976698353643606,
+    "win_percent_harris": 15.95967980528038,
+    "win_percent_trump": 84.04032019471963,
+    "winner": "Donald Trump"
+  },
+  "Utah": {
+    "Donald Trump": 51.44367973822534,
+    "Kamala Harris": 25.43841297028351,
+    "electoral_votes": 6,
+    "mean_diff": -26.005266767941833,
+    "win_percent_harris": 0.0007314186716935403,
+    "win_percent_trump": 99.99926858132831,
+    "winner": "Donald Trump"
+  },
+  "Vermont": {
+    "Donald Trump": 28.099528560335347,
+    "Kamala Harris": 66.54562099705136,
+    "electoral_votes": 3,
+    "mean_diff": 38.446092436716015,
+    "win_percent_harris": 99.99999999261256,
+    "win_percent_trump": 7.387446210316284e-09,
+    "winner": "Kamala Harris"
+  },
+  "Virginia": {
+    "Donald Trump": 42.20517543284353,
+    "Kamala Harris": 45.48496482906568,
+    "electoral_votes": 13,
+    "mean_diff": 3.2797893962221494,
+    "win_percent_harris": 70.76840609404138,
+    "win_percent_trump": 29.23159390595862,
+    "winner": "Kamala Harris"
+  },
+  "Washington": {
+    "Donald Trump": 36.635386342036156,
+    "Kamala Harris": 49.31301783770025,
+    "electoral_votes": 12,
+    "mean_diff": 12.677631495664095,
+    "win_percent_harris": 98.26969875028902,
+    "win_percent_trump": 1.7303012497109749,
+    "winner": "Kamala Harris"
+  },
+  "West Virginia": {
+    "Donald Trump": 57.05432552106524,
+    "Kamala Harris": 29.22540049101546,
+    "electoral_votes": 4,
+    "mean_diff": -27.828925030049778,
+    "win_percent_harris": 0.00017576726524997497,
+    "win_percent_trump": 99.99982423273475,
+    "winner": "Donald Trump"
+  },
+  "Wisconsin": {
+    "Donald Trump": 45.87184966842273,
+    "Kamala Harris": 47.131922669159,
+    "electoral_votes": 10,
+    "mean_diff": 1.26007300073627,
+    "win_percent_harris": 58.31709114671075,
+    "win_percent_trump": 41.68290885328925,
+    "winner": "Kamala Harris"
+  },
+  "Wyoming": {
+    "Donald Trump": 52.6,
+    "Kamala Harris": 20.2,
+    "electoral_votes": 3,
+    "mean_diff": -32.400000000000006,
+    "win_percent_harris": 3.3320448485428216e-06,
+    "win_percent_trump": 99.99999666795514,
+    "winner": "Donald Trump"
+  },
+  "Electoral": {
+    "Donald Trump": 268.0,
+    "Kamala Harris": 270.0,
+    "electoral_votes": 0,
+    "mean_diff": 0.0,
+    "win_percent_harris": 51.709807646639746,
+    "win_percent_trump": 48.29019235336025,
+    "winner": "tie"
+  }
+}

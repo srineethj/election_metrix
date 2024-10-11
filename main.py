@@ -1,6 +1,10 @@
 import csv
 import random
+
+import pandas
 from fpdf import FPDF
+import json
+import datetime
 
 import pandas as pd
 import sys
@@ -19,6 +23,8 @@ import contextily as ctx
 
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
+import firebase_admin
+from firebase_admin import credentials, db
 
 # pd.set_option('display.max_columns', None)  # Show all columns
 # pd.set_option('display.max_rows', None)  # Show all rows
@@ -122,7 +128,7 @@ def construct_import(data, safe_state_data):
     # print(df)
     df_filt = df[columns_to_keep].copy()
 
-    michigan_polls = df_filt[df_filt['state'] == 'Michigan']
+    michigan_polls = df_filt[df_filt['state'] == 'Nevada']
     print(michigan_polls)
 
     ## add DC dummy data :eyeroll:
@@ -281,8 +287,8 @@ def calculate_weights(df):
     print("---> CALCULATING WEIGHTS")
     print("")
     # Default sample size if missing
-    df['sample_size'] = df['sample_size'].fillna(100)
-    df['numeric_grade'] = df['numeric_grade'].fillna(1)
+    df['sample_size'] = df['sample_size'].fillna(250)
+    df['numeric_grade'] = df['numeric_grade'].fillna(1.5)
 
     # Convert end_date to datetime if it's not already
     df['end_date'] = pd.to_datetime(df['end_date'])
@@ -291,7 +297,7 @@ def calculate_weights(df):
     reference_date = df['end_date'].min()
     df['days_from_reference'] = (reference_date - df['end_date']).dt.days
 
-    decay_factor = 0.0025
+    decay_factor = 0.00125
     # decay_factor = 1
     df['recency_weight'] = np.exp(-decay_factor * df['days_from_reference'])
 
@@ -546,12 +552,124 @@ def pdf_test():
     pdf.cell(ln=10, h=5.0, align='L', w=0, txt="Hello", border=0)
     pdf.output('test.pdf', 'F')
 
+def add_final_electoral_results(df_pivot, df_summary):
+    # Calculate total electoral votes for Harris and Trump
+    total_harris_votes = df_pivot[df_pivot['winner'] == 'Kamala Harris']['electoral_votes'].sum()
+    total_trump_votes = df_pivot[df_pivot['winner'] == 'Donald Trump']['electoral_votes'].sum()
+
+    # Get the probabilities from df_summary (simulated outcomes)
+    harris_percent = df_summary.loc[df_summary['Outcome'] == 'Kamala Harris', 'Percentage'].values[0]
+    trump_percent = df_summary.loc[df_summary['Outcome'] == 'Donald Trump', 'Percentage'].values[0]
+
+    # print("##### OUTCOMES")
+    # print(harris_percent)
+    # Determine the final winner only if the percent difference is greater than 5%
+    if abs(harris_percent - trump_percent) > 5:
+        final_winner = 'Kamala Harris' if harris_percent > trump_percent else 'Donald Trump'
+    else:
+        final_winner = 'tie'
+
+    # Create the row for the final electoral results
+    # date = datetime.datetime.now().strftime('%Y%m%d')
+    date = datetime.datetime.now().strftime('%Y%m%d')
+    electoral_results = {
+        'state': 'Electoral',
+        'electoral_votes': 0,
+        'Donald Trump': total_trump_votes,
+        'Kamala Harris': total_harris_votes,
+        'win_percent_harris': harris_percent,
+        'win_percent_trump': trump_percent,
+        'mean_diff': 0,
+        'winner': final_winner,
+        'date': date
+    }
+
+    try:
+        historical_df = pd.read_csv("historical_data.csv")
+    except FileNotFoundError:
+        historical_df = pd.DataFrame(columns=['date', 'percent_win_harris', 'percent_win_trump'])
+
+    current_date = datetime.datetime.now().strftime('%m-%d')
+    new_row = {'date': current_date, 'percent_win_harris': harris_percent, 'percent_win_trump': trump_percent}
+
+    historical_df = historical_df._append(new_row, ignore_index=True)
+    historical_df.to_csv("historical_data.csv", index=False)
+
+
+    # print(electoral_results)
+
+    # Append the final results to the DataFrame
+    electoral_df = pd.DataFrame([electoral_results])
+
+    # Append the final results to the DataFrame
+    df_pivot = pd.concat([df_pivot, electoral_df], ignore_index=True)
+
+   #  df_pivot = df_pivot._append(electoral_results, ignore_index=True)
+
+    return df_pivot
+
+def historical():
+    # Read the historical CSV file
+    csv_file = 'historical_data.csv'
+    df = pd.read_csv(csv_file)
+
+    # Initialize the JSON structure for historical data
+    historical_data = {"Historical": {}}
+
+    # Loop through the DataFrame and build the historical JSON structure
+    for index, row in df.iterrows():
+        date = row['date']
+        harris_percent = float(row['percent_win_harris'])  # Convert float to int if needed
+        trump_percent = float(row['percent_win_trump'])  # Convert float to int if needed
+
+        # Create an entry for the date
+        historical_data["Historical"][date] = {
+            "Harris": harris_percent,
+            "Trump": trump_percent
+        }
+
+    return historical_data
+
+def df_pivot_to_json(df_pivot):
+    result_dict = {}
+
+    # Iterate through each row of df_pivot
+    for _, row in df_pivot.iterrows():
+        state = row['state']
+
+        # Create a dictionary for each state's data
+        state_data = {
+            "Donald Trump": row['Donald Trump'],
+            "Kamala Harris": row['Kamala Harris'],
+            "electoral_votes": row['electoral_votes'],
+            "mean_diff": row['mean_diff'],
+            "win_percent_harris": row['win_percent_harris'],
+            "win_percent_trump": row['win_percent_trump'],
+            "winner": row['winner']
+        }
+
+        # Add the state's data to the result dictionary
+        result_dict[state] = state_data
+
+    # Convert the result dictionary to a JSON string
+    json_output = json.dumps(result_dict, indent=2)
+
+    # Optionally save to a file
+    with open('electoral_results.json', 'w') as json_file:
+        json_file.write(json_output)
+
+    return json_output
 
 from itertools import product
 from collections import Counter
 
 if __name__ == '__main__':
-    start_time = time.time()
+    cred = credentials.Certificate('metrix-d84a6-firebase-adminsdk-mzl7o-370ba512ad.json')
+    firebase_admin.initialize_app(cred, {
+        'databaseURL': 'https://metrix-d84a6-default-rtdb.firebaseio.com/'
+    })
+
+    ref = db.reference('')
 
     try:
         data = "https://projects.fivethirtyeight.com/polls/data/president_polls.csv"
@@ -559,6 +677,7 @@ if __name__ == '__main__':
         df_pivot = construct_import(data, safe_data)
         df_pivot.to_csv('df_pivot.csv', index=False)
         MAX = 1
+        avg_df_summary = pandas.DataFrame
         for i in range(0, MAX):
             num_simulations = random.randint(5000, 9999)
             print("")
@@ -567,8 +686,12 @@ if __name__ == '__main__':
             df_summary = simulate_elections(df_pivot, num_simulations)
             print(f"Simulation where n =", num_simulations)
             print(df_summary)
+            avg_df_summary = df_summary
             print("SIMULATION END   --> ")
             print("")
+
+        new_pivot = add_final_electoral_results(df_pivot, avg_df_summary)
+        json_output = df_pivot_to_json(new_pivot)
         # print("##### COCONUT TREE #####")
         # print(coconut_tree(df_pivot, 1000))
         # Print tables
@@ -576,11 +699,52 @@ if __name__ == '__main__':
         print_swing_states_won(df_pivot, swing_states={'North Carolina', 'Pennsylvania', 'Georgia', 'Wisconsin', 'Michigan',
                                                        'Arizona', 'Michigan', 'Nevada'})
         shapefile_path = 'states/ne_110m_admin_1_states_provinces.shp'
-        generate_electoral_globe(df_pivot, shapefile_path)
+        # generate_electoral_globe(df_pivot, shapefile_path)
         end_time = time.time()
-        elapsed_time = end_time - start_time
+        # elapsed_time = end_time - start_time
         print("")
-        print(f"TOTAL PROCESS RUNTIME: {elapsed_time:.2f} seconds")
+        # print(f"TOTAL PROCESS RUNTIME: {elapsed_time:.2f} seconds")
+        print("Sample JSON")
+        historical_data = historical()
+        print(json_output)
+
+        # with open('x.json', 'w') as json_file:
+        #     json.dump(json_output, json_file, indent=4)
+        date = datetime.datetime.now().strftime('%Y%m%d')
+        # Create the filename with the date
+        filename = f'database/x_{date}.json'
+
+        with open(filename, 'w') as f:
+            f.write(json_output)
+
+        with open(filename, 'r') as json_file:
+            data = json.load(json_file)
+            # print("unslay")
+            # data["Electoral"]["date"] = datetime.datetime.now().strftime("%B %d, %Y")
+            data["Electoral"]["date"] = datetime.datetime.now().strftime("%B %d, %Y %I:%M %p")
+            data['Historical'] = historical_data['Historical']
+            print(data)
+            # print(data)
+            # print("Historical data:")
+            # print(historical_data)
+            # print(data)
+
+        with open("database/last_output.json", 'w') as j:
+            q = json.dumps(data, indent=4)
+            j.write(q)
+
+        x = input("WRITE TO FIREBASE? Y/N")
+        if x.upper() == "Y":
+            print("Writing to Firebase")
+            ref.set(data)
+            print("Operation successful")
+        else:
+            print("")
+            print("DID NOT WRITE TO FIREBASE")
+
+        print(df_summary)
+        exit(0)
+
 
     except Exception as e:
         print("ERROR: ---------> " + (str(e)))
