@@ -311,7 +311,7 @@ def calculate_weights(df):
     df['weight'] *= df['sample_size'] / df['sample_size'].mean()
 
     # Adjust weight based on numeric_grade, assuming higher grade (3) means higher trustworthiness
-    df['weight'] *= df['numeric_grade'] / df['numeric_grade'].mean()
+    # df['weight'] *= df['numeric_grade'] / df['numeric_grade'].mean()
 
     # Incorporate recency weight
     df['weight'] *= df['recency_weight']
@@ -564,7 +564,7 @@ def add_final_electoral_results(df_pivot, df_summary):
     # print("##### OUTCOMES")
     # print(harris_percent)
     # Determine the final winner only if the percent difference is greater than 5%
-    if abs(harris_percent - trump_percent) > 5:
+    if abs(harris_percent - trump_percent) > 3:
         final_winner = 'Kamala Harris' if harris_percent > trump_percent else 'Donald Trump'
     else:
         final_winner = 'tie'
@@ -679,7 +679,7 @@ if __name__ == '__main__':
         MAX = 1
         avg_df_summary = pandas.DataFrame
         for i in range(0, MAX):
-            num_simulations = random.randint(5000, 9999)
+            num_simulations = random.randint(99099, 100000)
             print("")
             print("ROUND " + str(i + 1) + " OUT OF " + str(MAX))
             print("SIMULATION START --> ")
