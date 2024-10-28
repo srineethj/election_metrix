@@ -216,7 +216,7 @@ def construct_import(data, safe_state_data):
     std_dev = df_pivot['mean_diff'].std()
 
     # Apply the norm.cdf with the calculated standard deviation
-    df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: norm.cdf(x, 0, 4.5)) * 100
+    df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: norm.cdf(x, 0, 4)) * 100
 
     # df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: cauchy.cdf(x, loc=0, scale=4)) * 100
 
