@@ -5,6 +5,12 @@ import pandas
 from fpdf import FPDF
 import json
 import datetime
+from scipy.stats import cauchy
+from scipy.stats import logistic
+
+
+import sys
+from scipy.special import expit
 
 import pandas as pd
 import sys
@@ -200,8 +206,22 @@ def construct_import(data, safe_state_data):
     # Assign electoral votes to each state
     df_pivot['electoral_votes'] = df_pivot['state'].map(electoral_votes)
 
+    # mean_diff_mean = df_pivot['mean_diff'].mean()
+    # mean_diff_std = df_pivot['mean_diff'].std()
+
     # Calculate win probability based on the margin (using a normal distribution assumption)
-    df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: norm.cdf(x, 0, 6)) * 100
+    # df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: norm.cdf(x) * 100)
+    # df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply( lambda x: expit((x - mean_diff_mean) / mean_diff_std) * 100)
+    # Calculate the standard deviation from the data
+    std_dev = df_pivot['mean_diff'].std()
+
+    # Apply the norm.cdf with the calculated standard deviation
+    df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: norm.cdf(x, 0, 4.5)) * 100
+
+    # df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: cauchy.cdf(x, loc=0, scale=4)) * 100
+
+    # df_pivot['win_percent_harris'] = df_pivot['mean_diff'].apply(lambda x: logistic.cdf(x, loc=0)) * 100
+
     df_pivot['win_percent_trump'] = (1 - df_pivot['win_percent_harris'] / 100) * 100
 
     # Determine the leading candidate in each state
@@ -460,7 +480,11 @@ def simulate_elections(df_pivot, num_simulations=1000):
     WINNING_THRESHOLD = 270
 
     # Run simulations
+    z = 0
     for _ in range(num_simulations):
+        z = z + 1
+        # print("SIMULATION: " + str(z))
+        # sys.stdout.write("\033[F")
         # Initialize electoral votes for candidates
         electoral_votes = {
             'Kamala Harris': 0,
@@ -544,13 +568,6 @@ def print_swing_states_won(df_pivot, swing_states):
     print("REP SWING        --> ")
     print(trump_won)
 
-def pdf_test():
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_xy(0, 0)
-    pdf.set_font('arial', 'B', 13.0)
-    pdf.cell(ln=10, h=5.0, align='L', w=0, txt="Hello", border=0)
-    pdf.output('test.pdf', 'F')
 
 def add_final_electoral_results(df_pivot, df_summary):
     # Calculate total electoral votes for Harris and Trump
@@ -679,7 +696,8 @@ if __name__ == '__main__':
         MAX = 1
         avg_df_summary = pandas.DataFrame
         for i in range(0, MAX):
-            num_simulations = random.randint(99099, 100000)
+            num_simulations = random.randint(100000, 100000)
+            # print("Loading" + ": " + str(i))
             print("")
             print("ROUND " + str(i + 1) + " OUT OF " + str(MAX))
             print("SIMULATION START --> ")
@@ -689,6 +707,7 @@ if __name__ == '__main__':
             avg_df_summary = df_summary
             print("SIMULATION END   --> ")
             print("")
+            # Cursor up one line
 
         new_pivot = add_final_electoral_results(df_pivot, avg_df_summary)
         json_output = df_pivot_to_json(new_pivot)
