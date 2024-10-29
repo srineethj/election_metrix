@@ -499,10 +499,10 @@
         "Kamala Harris": 270.0,
         "electoral_votes": 0,
         "mean_diff": 0.0,
-        "win_percent_harris": 41.82,
-        "win_percent_trump": 58.18,
+        "win_percent_harris": 42.073,
+        "win_percent_trump": 57.92699999999999,
         "winner": "Donald Trump",
-        "date": "October 28, 2024 10:52 PM"
+        "date": "October 29, 2024 12:33 AM"
     },
     "Historical": {
         "10-01": {
@@ -592,6 +592,10 @@
         "10-28": {
             "Harris": 41.82,
             "Trump": 58.18
+        },
+        "10-29": {
+            "Harris": 42.073,
+            "Trump": 57.92699999999999
         }
     }
 }
