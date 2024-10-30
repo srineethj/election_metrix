@@ -1,4 +1,14 @@
 poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,transparency_score,state,start_date,end_date,sample_size,population,party,candidate_id,candidate_name,pct,Pollster,Average Error,Error Favored Republicans,Error Favored Democrats,corrected_pct
+89083,1890,SoCal Strategies,On Point Politics | Red Eagle Politics,SoCal Strategies,,Online Panel,9.0,Wisconsin,2024-10-28,2024-10-29,600.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
+89083,1890,SoCal Strategies,On Point Politics | Red Eagle Politics,SoCal Strategies,,Online Panel,9.0,Wisconsin,2024-10-28,2024-10-29,600.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89090,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-27,2024-10-29,1302.0,lv,DEM,16661,Kamala Harris,48.3,unkwn,0,0,0,48.3
+89090,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-27,2024-10-29,1302.0,lv,REP,16651,Donald Trump,47.5,unkwn,0,0,0,47.5
+89090,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-27,2024-10-29,1302.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89090,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-27,2024-10-29,1302.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
+89088,568,YouGov,Economist,YouGov,3.0,Online Panel,9.0,**National,2024-10-26,2024-10-29,1446.0,rv,DEM,16661,Kamala Harris,47.0,YouGov,3.7,50.0,50.0,48.85
+89088,568,YouGov,Economist,YouGov,3.0,Online Panel,9.0,**National,2024-10-26,2024-10-29,1446.0,rv,REP,16651,Donald Trump,46.0,YouGov,3.7,50.0,50.0,44.15
+89088,568,YouGov,Economist,YouGov,3.0,Online Panel,9.0,**National,2024-10-26,2024-10-29,1310.0,lv,DEM,16661,Kamala Harris,49.0,YouGov,3.7,50.0,50.0,50.85
+89088,568,YouGov,Economist,YouGov,3.0,Online Panel,9.0,**National,2024-10-26,2024-10-29,1310.0,lv,REP,16651,Donald Trump,47.0,YouGov,3.7,50.0,50.0,45.15
 89056,1528,AtlasIntel,none,AtlasIntel,2.7,Online Ad,6.0,**National,2024-10-25,2024-10-29,3032.0,lv,DEM,16661,Kamala Harris,47.0,unkwn,0,0,0,47.0
 89056,1528,AtlasIntel,none,AtlasIntel,2.7,Online Ad,6.0,**National,2024-10-25,2024-10-29,3032.0,lv,REP,16651,Donald Trump,49.5,unkwn,0,0,0,49.5
 89056,1528,AtlasIntel,none,AtlasIntel,2.7,Online Ad,6.0,**National,2024-10-25,2024-10-29,3032.0,lv,DEM,16661,Kamala Harris,48.1,unkwn,0,0,0,48.1
@@ -31,12 +41,20 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 89064,1528,AtlasIntel,none,AtlasIntel,2.7,Online Ad,6.0,Wisconsin,2024-10-25,2024-10-29,1470.0,lv,REP,16651,Donald Trump,48.7,unkwn,0,0,0,48.7
 89064,1528,AtlasIntel,none,AtlasIntel,2.7,Online Ad,6.0,Wisconsin,2024-10-25,2024-10-29,1470.0,lv,DEM,16661,Kamala Harris,48.5,unkwn,0,0,0,48.5
 89064,1528,AtlasIntel,none,AtlasIntel,2.7,Online Ad,6.0,Wisconsin,2024-10-25,2024-10-29,1470.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89096,1741,ActiVote,none,ActiVote,,App Panel,8.0,South Carolina,2024-10-05,2024-10-29,400.0,lv,DEM,16661,Kamala Harris,41.5,unkwn,0,0,0,41.5
+89096,1741,ActiVote,none,ActiVote,,App Panel,8.0,South Carolina,2024-10-05,2024-10-29,400.0,lv,REP,16651,Donald Trump,58.5,unkwn,0,0,0,58.5
+89085,1741,ActiVote,none,ActiVote,,App Panel,8.0,Washington,2024-10-03,2024-10-29,400.0,lv,DEM,16661,Kamala Harris,59.1,unkwn,0,0,0,59.1
+89085,1741,ActiVote,none,ActiVote,,App Panel,8.0,Washington,2024-10-03,2024-10-29,400.0,lv,REP,16651,Donald Trump,40.9,unkwn,0,0,0,40.9
+89097,1741,ActiVote,none,ActiVote,,App Panel,8.0,Oklahoma,2024-10-03,2024-10-29,400.0,lv,DEM,16661,Kamala Harris,33.2,unkwn,0,0,0,33.2
+89097,1741,ActiVote,none,ActiVote,,App Panel,8.0,Oklahoma,2024-10-03,2024-10-29,400.0,lv,REP,16651,Donald Trump,66.8,unkwn,0,0,0,66.8
 89002,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-26,2024-10-28,1291.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
 89002,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-26,2024-10-28,1291.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
 89040,1308,Data Orbital,none,Data Orbital,2.9,Live Phone/Text-to-Web,10.0,Arizona,2024-10-26,2024-10-28,550.0,lv,DEM,16661,Kamala Harris,41.9,unkwn,0,0,0,41.9
 89040,1308,Data Orbital,none,Data Orbital,2.9,Live Phone/Text-to-Web,10.0,Arizona,2024-10-26,2024-10-28,550.0,lv,REP,16651,Donald Trump,49.7,unkwn,0,0,0,49.7
 89065,1895,Quantus Insights,TrendingPolitics,Quantus Insights,,Online Panel,5.5,Michigan,2024-10-26,2024-10-28,844.0,lv,DEM,16661,Kamala Harris,49.2,unkwn,0,0,0,49.2
 89065,1895,Quantus Insights,TrendingPolitics,Quantus Insights,,Online Panel,5.5,Michigan,2024-10-26,2024-10-28,844.0,lv,REP,16651,Donald Trump,48.5,unkwn,0,0,0,48.5
+89081,1347,Cygnal,none,Cygnal,2.1,,4.0,Texas,2024-10-26,2024-10-28,600.0,lv,DEM,16661,Kamala Harris,43.0,unkwn,0,0,0,43.0
+89081,1347,Cygnal,none,Cygnal,2.1,,4.0,Texas,2024-10-26,2024-10-28,600.0,lv,REP,16651,Donald Trump,51.0,unkwn,0,0,0,51.0
 89029,1250,Trafalgar Group,none,Trafalgar Group,0.7,IVR/Live Phone/Text/Online Panel/Email,4.0,North Carolina,2024-10-25,2024-10-28,1091.0,lv,DEM,16661,Kamala Harris,46.2,Trafalgar Group,5.4,86.0,14.0,46.956
 89029,1250,Trafalgar Group,none,Trafalgar Group,0.7,IVR/Live Phone/Text/Online Panel/Email,4.0,North Carolina,2024-10-25,2024-10-28,1091.0,lv,REP,16651,Donald Trump,49.4,Trafalgar Group,5.4,86.0,14.0,44.756
 89039,1250,Trafalgar Group,none,Trafalgar Group,0.7,IVR/Live Phone/Text/Online Panel/Email,4.0,Nevada,2024-10-25,2024-10-28,1082.0,lv,DEM,16661,Kamala Harris,47.8,Trafalgar Group,5.4,86.0,14.0,48.556
@@ -45,8 +63,28 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 89067,1250,Trafalgar Group,none,Trafalgar Group,0.7,IVR/Live Phone/Text/Online Panel/Email,4.0,Ohio,2024-10-25,2024-10-28,1127.0,lv,REP,16651,Donald Trump,51.7,Trafalgar Group,5.4,86.0,14.0,47.056000000000004
 89068,460,SurveyUSA,KSTP-TV Minneapolis | KAAL-TV | WDIO-TV Duluth,SurveyUSA,2.8,Online Panel,8.0,Minnesota,2024-10-24,2024-10-28,728.0,lv,DEM,16661,Kamala Harris,51.0,SurveyUSA,2.5,20.0,80.0,53.0
 89068,460,SurveyUSA,KSTP-TV Minneapolis | KAAL-TV | WDIO-TV Duluth,SurveyUSA,2.8,Online Panel,8.0,Minnesota,2024-10-24,2024-10-28,728.0,lv,REP,16651,Donald Trump,43.0,SurveyUSA,2.5,20.0,80.0,42.5
+89098,320,Monmouth,none,Monmouth University Polling Institute,2.9,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,824.0,rv,DEM,16661,Kamala Harris,46.0,unkwn,0,0,0,46.0
+89098,320,Monmouth,none,Monmouth University Polling Institute,2.9,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,824.0,rv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
+89104,396,Quinnipiac,none,Quinnipiac University,2.8,Live Phone,9.0,Pennsylvania,2024-10-24,2024-10-28,2186.0,lv,DEM,16661,Kamala Harris,46.0,unkwn,0,0,0,46.0
+89104,396,Quinnipiac,none,Quinnipiac University,2.8,Live Phone,9.0,Pennsylvania,2024-10-24,2024-10-28,2186.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
+89104,396,Quinnipiac,none,Quinnipiac University,2.8,Live Phone,9.0,Pennsylvania,2024-10-24,2024-10-28,2186.0,lv,DEM,16661,Kamala Harris,47.0,unkwn,0,0,0,47.0
+89104,396,Quinnipiac,none,Quinnipiac University,2.8,Live Phone,9.0,Pennsylvania,2024-10-24,2024-10-28,2186.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89099,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Michigan,2024-10-23,2024-10-28,726.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89099,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Michigan,2024-10-23,2024-10-28,726.0,lv,REP,16651,Donald Trump,43.0,unkwn,0,0,0,43.0
+89100,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Pennsylvania,2024-10-23,2024-10-28,819.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89100,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Pennsylvania,2024-10-23,2024-10-28,819.0,lv,REP,16651,Donald Trump,48.0,unkwn,0,0,0,48.0
+89101,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Wisconsin,2024-10-23,2024-10-28,736.0,lv,DEM,16661,Kamala Harris,51.0,unkwn,0,0,0,51.0
+89101,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Wisconsin,2024-10-23,2024-10-28,736.0,lv,REP,16651,Donald Trump,45.0,unkwn,0,0,0,45.0
 89066,568,YouGov,CBS News,YouGov,3.0,Online Panel,9.0,Pennsylvania,2024-10-22,2024-10-28,1273.0,lv,DEM,16661,Kamala Harris,49.0,YouGov,3.7,50.0,50.0,50.85
 89066,568,YouGov,CBS News,YouGov,3.0,Online Panel,9.0,Pennsylvania,2024-10-22,2024-10-28,1273.0,lv,REP,16651,Donald Trump,49.0,YouGov,3.7,50.0,50.0,47.15
+89078,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska,2024-10-21,2024-10-28,1206.0,lv,DEM,16661,Kamala Harris,40.0,YouGov,3.7,50.0,50.0,41.85
+89078,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska,2024-10-21,2024-10-28,1206.0,lv,REP,16651,Donald Trump,55.0,YouGov,3.7,50.0,50.0,53.15
+89092,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska CD-1,2024-10-21,2024-10-28,408.0,lv,DEM,16661,Kamala Harris,43.0,YouGov,3.7,50.0,50.0,44.85
+89092,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska CD-1,2024-10-21,2024-10-28,408.0,lv,REP,16651,Donald Trump,51.0,YouGov,3.7,50.0,50.0,49.15
+89093,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska CD-2,2024-10-21,2024-10-28,393.0,lv,DEM,16661,Kamala Harris,52.0,YouGov,3.7,50.0,50.0,53.85
+89093,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska CD-2,2024-10-21,2024-10-28,393.0,lv,REP,16651,Donald Trump,44.0,YouGov,3.7,50.0,50.0,42.15
+89094,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska CD-3,2024-10-21,2024-10-28,404.0,lv,DEM,16661,Kamala Harris,25.0,YouGov,3.7,50.0,50.0,26.85
+89094,568,YouGov,Economist,YouGov,3.0,Online Panel/Text-to-Web,9.0,Nebraska CD-3,2024-10-21,2024-10-28,404.0,lv,REP,16651,Donald Trump,70.0,YouGov,3.7,50.0,50.0,68.15
 89011,1741,ActiVote,none,ActiVote,,App Panel,8.0,Ohio,2024-10-05,2024-10-28,400.0,lv,DEM,16661,Kamala Harris,45.9,unkwn,0,0,0,45.9
 89011,1741,ActiVote,none,ActiVote,,App Panel,8.0,Ohio,2024-10-05,2024-10-28,400.0,lv,REP,16651,Donald Trump,54.1,unkwn,0,0,0,54.1
 89013,1741,ActiVote,none,ActiVote,,App Panel,8.0,Tennessee,2024-10-05,2024-10-28,400.0,lv,DEM,16661,Kamala Harris,38.3,unkwn,0,0,0,38.3
@@ -67,6 +105,8 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 89022,1347,Cygnal,none,Cygnal,2.1,,4.0,New York,2024-10-26,2024-10-27,600.0,lv,REP,16651,Donald Trump,39.0,unkwn,0,0,0,39.0
 89025,235,InsiderAdvantage,none,InsiderAdvantage,2.0,,5.0,Wisconsin,2024-10-26,2024-10-27,800.0,lv,DEM,16661,Kamala Harris,48.0,InsiderAdvantage,5.8,81.0,19.0,49.102
 89025,235,InsiderAdvantage,none,InsiderAdvantage,2.0,,5.0,Wisconsin,2024-10-26,2024-10-27,800.0,lv,REP,16651,Donald Trump,49.0,InsiderAdvantage,5.8,81.0,19.0,44.302
+89095,1890,SoCal Strategies,On Point Politics | Red Eagle Politics,SoCal Strategies,,Online Panel,9.0,Georgia,2024-10-26,2024-10-27,658.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
+89095,1890,SoCal Strategies,On Point Politics | Red Eagle Politics,SoCal Strategies,,Online Panel,9.0,Georgia,2024-10-26,2024-10-27,658.0,lv,REP,16651,Donald Trump,50.0,unkwn,0,0,0,50.0
 88979,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-25,2024-10-27,1288.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
 88979,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-25,2024-10-27,1288.0,lv,REP,16651,Donald Trump,48.0,unkwn,0,0,0,48.0
 89001,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-10-25,2024-10-27,8807.0,lv,DEM,16661,Kamala Harris,50.0,unkwn,0,0,0,50.0
@@ -93,10 +133,16 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 89035,1562,Redfield & Wilton Strategies,The Telegraph,Redfield & Wilton Strategies,1.8,Online Panel,9.0,Pennsylvania,2024-10-25,2024-10-27,1116.0,lv,REP,16651,Donald Trump,48.0,unkwn,0,0,0,48.0
 89036,1562,Redfield & Wilton Strategies,The Telegraph,Redfield & Wilton Strategies,1.8,Online Panel,9.0,Wisconsin,2024-10-25,2024-10-27,746.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
 89036,1562,Redfield & Wilton Strategies,The Telegraph,Redfield & Wilton Strategies,1.8,Online Panel,9.0,Wisconsin,2024-10-25,2024-10-27,746.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
+89080,1256,RABA Research,none,RABA Research,1.3,Online Panel,7.0,Arizona,2024-10-25,2024-10-27,589.0,rv,DEM,16661,Kamala Harris,45.0,unkwn,0,0,0,45.0
+89080,1256,RABA Research,none,RABA Research,1.3,Online Panel,7.0,Arizona,2024-10-25,2024-10-27,589.0,rv,REP,16651,Donald Trump,43.0,unkwn,0,0,0,43.0
+89082,458,Suffolk,USA Today,Suffolk University,2.9,Live Phone,8.0,Michigan,2024-10-24,2024-10-27,500.0,lv,DEM,16661,Kamala Harris,47.0,unkwn,0,0,0,47.0
+89082,458,Suffolk,USA Today,Suffolk University,2.9,Live Phone,8.0,Michigan,2024-10-24,2024-10-27,500.0,lv,REP,16651,Donald Trump,47.4,unkwn,0,0,0,47.4
 89004,26,Angus Reid,none,Angus Reid Global,2.0,Online Panel,6.0,**National,2024-10-23,2024-10-27,1928.0,rv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
 89004,26,Angus Reid,none,Angus Reid Global,2.0,Online Panel,6.0,**National,2024-10-23,2024-10-27,1928.0,rv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
 89017,461,Susquehanna,none,Susquehanna Polling & Research,2.3,,5.5,Michigan,2024-10-23,2024-10-27,400.0,lv,DEM,16661,Kamala Harris,51.7,Susquehanna,2.6,67.0,33.0,52.558
 89017,461,Susquehanna,none,Susquehanna Polling & Research,2.3,,5.5,Michigan,2024-10-23,2024-10-27,400.0,lv,REP,16651,Donald Trump,46.6,Susquehanna,2.6,67.0,33.0,44.858000000000004
+89089,1800,Noble Predictive Insights,none,Noble Predictive Insights,2.4,Live Phone/Text-to-Web,6.0,**National,2024-10-23,2024-10-27,707.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
+89089,1800,Noble Predictive Insights,none,Noble Predictive Insights,2.4,Live Phone/Text-to-Web,6.0,**National,2024-10-23,2024-10-27,707.0,lv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
 88981,1741,ActiVote,none,ActiVote,,App Panel,8.0,Texas,2024-10-21,2024-10-27,400.0,lv,DEM,16661,Kamala Harris,45.0,unkwn,0,0,0,45.0
 88981,1741,ActiVote,none,ActiVote,,App Panel,8.0,Texas,2024-10-21,2024-10-27,400.0,lv,REP,16651,Donald Trump,55.0,unkwn,0,0,0,55.0
 89037,1801,Florida Atlantic University/Mainstreet Research,none,Florida Atlantic University PolCom Lab/Mainstreet Research,,Text-to-Web,6.0,**National,2024-10-20,2024-10-27,937.0,rv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
@@ -127,6 +173,8 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 88977,1304,Praecones Analytica,New Hampshire Journal,Praecones Analytica,2.0,Online Panel,8.5,New Hampshire,2024-10-24,2024-10-26,622.0,rv,REP,16651,Donald Trump,50.2,unkwn,0,0,0,50.2
 89000,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-10-24,2024-10-26,8472.0,lv,DEM,16661,Kamala Harris,50.0,unkwn,0,0,0,50.0
 89000,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-10-24,2024-10-26,8472.0,lv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
+89077,1102,Emerson,7News/WHDH,Emerson College,2.9,Online Panel/Text-to-Web,7.0,Massachusetts,2024-10-24,2024-10-26,1000.0,lv,DEM,16661,Kamala Harris,60.2,unkwn,0,0,0,60.2
+89077,1102,Emerson,7News/WHDH,Emerson College,2.9,Online Panel/Text-to-Web,7.0,Massachusetts,2024-10-24,2024-10-26,1000.0,lv,REP,16651,Donald Trump,37.2,unkwn,0,0,0,37.2
 88972,1424,Siena/NYT,none,The New York Times/Siena College,3.0,Live Phone,9.0,Texas,2024-10-23,2024-10-26,1180.0,rv,DEM,16661,Kamala Harris,41.0,unkwn,0,0,0,41.0
 88972,1424,Siena/NYT,none,The New York Times/Siena College,3.0,Live Phone,9.0,Texas,2024-10-23,2024-10-26,1180.0,rv,REP,16651,Donald Trump,52.0,unkwn,0,0,0,52.0
 88972,1424,Siena/NYT,none,The New York Times/Siena College,3.0,Live Phone,9.0,Texas,2024-10-23,2024-10-26,1180.0,rv,DEM,16661,Kamala Harris,40.0,unkwn,0,0,0,40.0
@@ -237,6 +285,14 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 88998,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-10-22,2024-10-24,8669.0,lv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
 88932,1741,ActiVote,none,ActiVote,,App Panel,8.0,**National,2024-10-19,2024-10-24,1000.0,lv,DEM,16661,Kamala Harris,50.1,unkwn,0,0,0,50.1
 88932,1741,ActiVote,none,ActiVote,,App Panel,8.0,**National,2024-10-19,2024-10-24,1000.0,lv,REP,16651,Donald Trump,49.9,unkwn,0,0,0,49.9
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,753.0,lv,DEM,16661,Kamala Harris,50.0,unkwn,0,0,0,50.0
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,753.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,753.0,lv,DEM,16661,Kamala Harris,46.0,unkwn,0,0,0,46.0
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,753.0,lv,REP,16651,Donald Trump,44.0,unkwn,0,0,0,44.0
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,834.0,rv,DEM,16661,Kamala Harris,51.0,unkwn,0,0,0,51.0
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,834.0,rv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,834.0,rv,DEM,16661,Kamala Harris,46.0,unkwn,0,0,0,46.0
+89103,1075,Marquette Law School,none,Marquette University Law School,3.0,Probability Panel,10.0,Wisconsin,2024-10-16,2024-10-24,834.0,rv,REP,16651,Donald Trump,43.0,unkwn,0,0,0,43.0
 88907,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-21,2024-10-23,1294.0,lv,DEM,16661,Kamala Harris,50.0,unkwn,0,0,0,50.0
 88907,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-21,2024-10-23,1294.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
 88933,1102,Emerson,7News/WHDH | The Hill,Emerson College,2.9,Online Panel/Text-to-Web,7.0,New Hampshire,2024-10-21,2024-10-23,915.0,lv,DEM,16661,Kamala Harris,50.9,unkwn,0,0,0,50.9
@@ -336,6 +392,8 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 88964,241,Ipsos,ABC News,Ipsos,2.8,Probability Panel,9.5,**National,2024-10-18,2024-10-22,1913.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
 88966,1516,East Carolina University,none,East Carolina University Center for Survey Research,2.6,IVR/Text-to-Web,7.0,South Carolina,2024-10-18,2024-10-22,950.0,lv,DEM,16661,Kamala Harris,42.0,unkwn,0,0,0,42.0
 88966,1516,East Carolina University,none,East Carolina University Center for Survey Research,2.6,IVR/Text-to-Web,7.0,South Carolina,2024-10-18,2024-10-22,950.0,lv,REP,16651,Donald Trump,55.1,unkwn,0,0,0,55.1
+89102,461,Susquehanna,La Torre Live,Susquehanna Polling & Research,2.3,Live Phone,5.5,Pennsylvania,2024-10-18,2024-10-22,500.0,lv,DEM,16661,Kamala Harris,46.0,Susquehanna,2.6,67.0,33.0,46.858
+89102,461,Susquehanna,La Torre Live,Susquehanna Polling & Research,2.3,Live Phone,5.5,Pennsylvania,2024-10-18,2024-10-22,500.0,lv,REP,16651,Donald Trump,45.8,Susquehanna,2.6,67.0,33.0,44.058
 88914,1205,Marist,none,Marist College,2.9,Live Phone/Online Panel/Text-to-Web,9.0,Georgia,2024-10-17,2024-10-22,1356.0,rv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
 88914,1205,Marist,none,Marist College,2.9,Live Phone/Online Panel/Text-to-Web,9.0,Georgia,2024-10-17,2024-10-22,1356.0,rv,REP,16651,Donald Trump,48.0,unkwn,0,0,0,48.0
 88914,1205,Marist,none,Marist College,2.9,Live Phone/Online Panel/Text-to-Web,9.0,Georgia,2024-10-17,2024-10-22,1193.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
@@ -350,12 +408,18 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 88916,1205,Marist,none,Marist College,2.9,Live Phone/Online Panel/Text-to-Web,9.0,Arizona,2024-10-17,2024-10-22,1193.0,lv,REP,16651,Donald Trump,50.0,unkwn,0,0,0,50.0
 88920,1296,University of Maryland/Washington Post,none,The Washington Post/University of Maryland Center for Democracy and Civic Engagement,2.5,Live Phone/Text-to-Web,8.0,Maryland,2024-10-17,2024-10-22,1000.0,lv,DEM,16661,Kamala Harris,61.0,unkwn,0,0,0,61.0
 88920,1296,University of Maryland/Washington Post,none,The Washington Post/University of Maryland Center for Democracy and Civic Engagement,2.5,Live Phone/Text-to-Web,8.0,Maryland,2024-10-17,2024-10-22,1000.0,lv,REP,16651,Donald Trump,33.0,unkwn,0,0,0,33.0
+89105,1913,Paradigm,none,Paradigm,,Online Panel,3.5,**National,2024-10-17,2024-10-22,1000.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89105,1913,Paradigm,none,Paradigm,,Online Panel,3.5,**National,2024-10-17,2024-10-22,1000.0,lv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
 88936,1900,Hunt Research,FSU Institute for Governance and Civics,Hunt Research,,Live Phone/Text-to-Web,7.0,Florida,2024-10-16,2024-10-22,1234.0,lv,DEM,16661,Kamala Harris,44.8,unkwn,0,0,0,44.8
 88936,1900,Hunt Research,FSU Institute for Governance and Civics,Hunt Research,,Live Phone/Text-to-Web,7.0,Florida,2024-10-16,2024-10-22,1234.0,lv,REP,16651,Donald Trump,49.9,unkwn,0,0,0,49.9
 88936,1900,Hunt Research,FSU Institute for Governance and Civics,Hunt Research,,Live Phone/Text-to-Web,7.0,Florida,2024-10-16,2024-10-22,1234.0,lv,DEM,16661,Kamala Harris,43.7,unkwn,0,0,0,43.7
 88936,1900,Hunt Research,FSU Institute for Governance and Civics,Hunt Research,,Live Phone/Text-to-Web,7.0,Florida,2024-10-16,2024-10-22,1234.0,lv,REP,16651,Donald Trump,49.7,unkwn,0,0,0,49.7
 88990,1746,Embold Research,MinnPost,Embold Research,1.4,Text-to-Web/Online Ad,6.0,Minnesota,2024-10-16,2024-10-22,1734.0,lv,DEM,16661,Kamala Harris,47.7,unkwn,0,0,0,47.7
 88990,1746,Embold Research,MinnPost,Embold Research,1.4,Text-to-Web/Online Ad,6.0,Minnesota,2024-10-16,2024-10-22,1734.0,lv,REP,16651,Donald Trump,45.1,unkwn,0,0,0,45.1
+89084,424,Rutgers-Eagleton,none,Rutgers University Eagleton Center for Public Interest Polling,2.3,Probability Panel,10.0,New Jersey,2024-10-15,2024-10-22,451.0,rv,DEM,16661,Kamala Harris,55.0,unkwn,0,0,0,55.0
+89084,424,Rutgers-Eagleton,none,Rutgers University Eagleton Center for Public Interest Polling,2.3,Probability Panel,10.0,New Jersey,2024-10-15,2024-10-22,451.0,rv,REP,16651,Donald Trump,35.0,unkwn,0,0,0,35.0
+89084,424,Rutgers-Eagleton,none,Rutgers University Eagleton Center for Public Interest Polling,2.3,Probability Panel,10.0,New Jersey,2024-10-15,2024-10-22,478.0,rv,DEM,16661,Kamala Harris,51.0,unkwn,0,0,0,51.0
+89084,424,Rutgers-Eagleton,none,Rutgers University Eagleton Center for Public Interest Polling,2.3,Probability Panel,10.0,New Jersey,2024-10-15,2024-10-22,478.0,rv,REP,16651,Donald Trump,37.0,unkwn,0,0,0,37.0
 88861,1562,Redfield & Wilton Strategies,none,Redfield & Wilton Strategies,1.8,Online Panel,9.0,**National,2024-10-21,2024-10-21,1189.0,lv,DEM,16661,Kamala Harris,45.0,unkwn,0,0,0,45.0
 88861,1562,Redfield & Wilton Strategies,none,Redfield & Wilton Strategies,1.8,Online Panel,9.0,**National,2024-10-21,2024-10-21,1189.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
 88878,1890,SoCal Strategies,On Point Politics | Red Eagle Politics,SoCal Strategies,,Online Panel,9.0,North Carolina,2024-10-20,2024-10-21,702.0,lv,DEM,16661,Kamala Harris,46.3,unkwn,0,0,0,46.3
@@ -602,6 +666,30 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 89005,978,Elon U.,none,Elon University,2.5,Online Panel,8.0,North Carolina,2024-10-10,2024-10-17,800.0,rv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
 88772,1741,ActiVote,none,ActiVote,,App Panel,8.0,**National,2024-10-09,2024-10-17,1000.0,lv,DEM,16661,Kamala Harris,48.9,unkwn,0,0,0,48.9
 88772,1741,ActiVote,none,ActiVote,,App Panel,8.0,**National,2024-10-09,2024-10-17,1000.0,lv,REP,16651,Donald Trump,51.1,unkwn,0,0,0,51.1
+89072,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,California,2024-10-07,2024-10-17,1139.0,rv,DEM,16661,Kamala Harris,63.0,YouGov,3.7,50.0,50.0,64.85
+89072,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,California,2024-10-07,2024-10-17,1139.0,rv,REP,16651,Donald Trump,34.0,YouGov,3.7,50.0,50.0,32.15
+89072,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,California,2024-10-07,2024-10-17,1139.0,lv,DEM,16661,Kamala Harris,63.0,YouGov,3.7,50.0,50.0,64.85
+89072,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,California,2024-10-07,2024-10-17,1139.0,lv,REP,16651,Donald Trump,34.0,YouGov,3.7,50.0,50.0,32.15
+89073,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Pennsylvania,2024-10-07,2024-10-17,1062.0,rv,DEM,16661,Kamala Harris,50.0,YouGov,3.7,50.0,50.0,51.85
+89073,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Pennsylvania,2024-10-07,2024-10-17,1062.0,rv,REP,16651,Donald Trump,47.0,YouGov,3.7,50.0,50.0,45.15
+89073,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Pennsylvania,2024-10-07,2024-10-17,1043.0,lv,DEM,16661,Kamala Harris,50.0,YouGov,3.7,50.0,50.0,51.85
+89073,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Pennsylvania,2024-10-07,2024-10-17,1043.0,lv,REP,16651,Donald Trump,48.0,YouGov,3.7,50.0,50.0,46.15
+89074,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Florida,2024-10-07,2024-10-17,1094.0,rv,DEM,16661,Kamala Harris,46.0,YouGov,3.7,50.0,50.0,47.85
+89074,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Florida,2024-10-07,2024-10-17,1094.0,rv,REP,16651,Donald Trump,51.0,YouGov,3.7,50.0,50.0,49.15
+89074,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Florida,2024-10-07,2024-10-17,1076.0,lv,DEM,16661,Kamala Harris,46.0,YouGov,3.7,50.0,50.0,47.85
+89074,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Florida,2024-10-07,2024-10-17,1076.0,lv,REP,16651,Donald Trump,51.0,YouGov,3.7,50.0,50.0,49.15
+89075,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Texas,2024-10-07,2024-10-17,1108.0,rv,DEM,16661,Kamala Harris,45.0,YouGov,3.7,50.0,50.0,46.85
+89075,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Texas,2024-10-07,2024-10-17,1108.0,rv,REP,16651,Donald Trump,50.0,YouGov,3.7,50.0,50.0,48.15
+89075,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Texas,2024-10-07,2024-10-17,1075.0,lv,DEM,16661,Kamala Harris,46.0,YouGov,3.7,50.0,50.0,47.85
+89075,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,Texas,2024-10-07,2024-10-17,1075.0,lv,REP,16651,Donald Trump,51.0,YouGov,3.7,50.0,50.0,49.15
+89076,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,New York,2024-10-07,2024-10-17,1089.0,rv,DEM,16661,Kamala Harris,58.0,YouGov,3.7,50.0,50.0,59.85
+89076,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,New York,2024-10-07,2024-10-17,1089.0,rv,REP,16651,Donald Trump,38.0,YouGov,3.7,50.0,50.0,36.15
+89076,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,New York,2024-10-07,2024-10-17,1089.0,lv,DEM,16661,Kamala Harris,58.0,YouGov,3.7,50.0,50.0,59.85
+89076,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,New York,2024-10-07,2024-10-17,1089.0,lv,REP,16651,Donald Trump,38.0,YouGov,3.7,50.0,50.0,36.15
+89091,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,**National,2024-10-07,2024-10-17,1500.0,rv,DEM,16661,Kamala Harris,50.0,YouGov,3.7,50.0,50.0,51.85
+89091,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,**National,2024-10-07,2024-10-17,1500.0,rv,REP,16651,Donald Trump,46.0,YouGov,3.7,50.0,50.0,44.15
+89091,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,**National,2024-10-07,2024-10-17,1500.0,lv,DEM,16661,Kamala Harris,51.0,YouGov,3.7,50.0,50.0,52.85
+89091,568,YouGov,Claremont McKenna College Rose Institute of State and Local Government,YouGov,3.0,Online Panel,9.0,**National,2024-10-07,2024-10-17,1500.0,lv,REP,16651,Donald Trump,46.0,YouGov,3.7,50.0,50.0,44.15
 88771,1741,ActiVote,none,ActiVote,,App Panel,8.0,Georgia,2024-10-01,2024-10-17,400.0,lv,DEM,16661,Kamala Harris,49.3,unkwn,0,0,0,49.3
 88771,1741,ActiVote,none,ActiVote,,App Panel,8.0,Georgia,2024-10-01,2024-10-17,400.0,lv,REP,16651,Donald Trump,50.7,unkwn,0,0,0,50.7
 88770,1741,ActiVote,none,ActiVote,,App Panel,8.0,South Carolina,2024-09-09,2024-10-17,400.0,lv,DEM,16661,Kamala Harris,41.6,unkwn,0,0,0,41.6
@@ -6610,6 +6698,8 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 86468,1800,Noble Predictive Insights,none,Noble Predictive Insights,2.4,Online Panel,6.0,Nevada,2024-02-27,2024-03-05,829.0,rv,REP,16651,Donald Trump,40.0,unkwn,0,0,0,40.0
 86335,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-03-02,2024-03-04,4000.0,rv,DEM,19368,Kamala Harris,44.0,unkwn,0,0,0,44.0
 86335,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-03-02,2024-03-04,4000.0,rv,REP,16651,Donald Trump,43.0,unkwn,0,0,0,43.0
+89106,379,Public Opinion Strategies,Paradigm,Public Opinion Strategies,1.6,,3.0,**National,2024-02-28,2024-03-04,1000.0,rv,DEM,19368,Kamala Harris,42.0,unkwn,0,0,0,42.0
+89106,379,Public Opinion Strategies,Paradigm,Public Opinion Strategies,1.6,,3.0,**National,2024-02-28,2024-03-04,1000.0,rv,REP,16651,Donald Trump,45.0,unkwn,0,0,0,45.0
 86264,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-03-01,2024-03-03,6334.0,rv,DEM,19368,Kamala Harris,44.0,unkwn,0,0,0,44.0
 86264,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-03-01,2024-03-03,6334.0,rv,REP,16651,Donald Trump,43.0,unkwn,0,0,0,43.0
 86336,1189,Morning Consult,none,Morning Consult,1.9,Online Panel,3.0,**National,2024-03-01,2024-03-03,4000.0,rv,DEM,19368,Kamala Harris,44.0,unkwn,0,0,0,44.0
