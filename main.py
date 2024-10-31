@@ -80,7 +80,9 @@ def construct_import(data, safe_state_data):
         'Mississippi': 6,
         'Missouri': 10,
         'Montana': 4,
-        'Nebraska': 4,  # Nebraska has 4 electoral votes, split by district
+        'Nebraska': 2,  # Nebraska has 4 electoral votes, split by district
+        'Nebraska CD-1': 1,
+        'Nebraska CD-3': 1,
         'Nebraska CD-2': 1,  # Congressional district 2
         'Nevada': 6,
         'New Hampshire': 4,

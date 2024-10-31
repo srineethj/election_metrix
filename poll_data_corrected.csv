@@ -1,6 +1,8 @@
 poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,transparency_score,state,start_date,end_date,sample_size,population,party,candidate_id,candidate_name,pct,Pollster,Average Error,Error Favored Republicans,Error Favored Democrats,corrected_pct
 89083,1890,SoCal Strategies,On Point Politics | Red Eagle Politics,SoCal Strategies,,Online Panel,9.0,Wisconsin,2024-10-28,2024-10-29,600.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
 89083,1890,SoCal Strategies,On Point Politics | Red Eagle Politics,SoCal Strategies,,Online Panel,9.0,Wisconsin,2024-10-28,2024-10-29,600.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89112,446,St. Anselm,none,Saint Anselm College Survey Center,2.4,Text-to-Web,6.0,New Hampshire,2024-10-28,2024-10-29,2791.0,lv,DEM,16661,Kamala Harris,51.0,unkwn,0,0,0,51.0
+89112,446,St. Anselm,none,Saint Anselm College Survey Center,2.4,Text-to-Web,6.0,New Hampshire,2024-10-28,2024-10-29,2791.0,lv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
 89090,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-27,2024-10-29,1302.0,lv,DEM,16661,Kamala Harris,48.3,unkwn,0,0,0,48.3
 89090,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-27,2024-10-29,1302.0,lv,REP,16651,Donald Trump,47.5,unkwn,0,0,0,47.5
 89090,770,TIPP,none,TIPP Insights,1.8,Online Panel,3.0,**National,2024-10-27,2024-10-29,1302.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
@@ -61,6 +63,8 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 89039,1250,Trafalgar Group,none,Trafalgar Group,0.7,IVR/Live Phone/Text/Online Panel/Email,4.0,Nevada,2024-10-25,2024-10-28,1082.0,lv,REP,16651,Donald Trump,47.6,Trafalgar Group,5.4,86.0,14.0,42.956
 89067,1250,Trafalgar Group,none,Trafalgar Group,0.7,IVR/Live Phone/Text/Online Panel/Email,4.0,Ohio,2024-10-25,2024-10-28,1127.0,lv,DEM,16661,Kamala Harris,45.6,Trafalgar Group,5.4,86.0,14.0,46.356
 89067,1250,Trafalgar Group,none,Trafalgar Group,0.7,IVR/Live Phone/Text/Online Panel/Email,4.0,Ohio,2024-10-25,2024-10-28,1127.0,lv,REP,16651,Donald Trump,51.7,Trafalgar Group,5.4,86.0,14.0,47.056000000000004
+89111,1800,Noble Predictive Insights,none,Noble Predictive Insights,2.4,Live Phone/Text-to-Web,6.0,Utah,2024-10-25,2024-10-28,695.0,lv,DEM,16661,Kamala Harris,34.0,unkwn,0,0,0,34.0
+89111,1800,Noble Predictive Insights,none,Noble Predictive Insights,2.4,Live Phone/Text-to-Web,6.0,Utah,2024-10-25,2024-10-28,695.0,lv,REP,16651,Donald Trump,54.0,unkwn,0,0,0,54.0
 89068,460,SurveyUSA,KSTP-TV Minneapolis | KAAL-TV | WDIO-TV Duluth,SurveyUSA,2.8,Online Panel,8.0,Minnesota,2024-10-24,2024-10-28,728.0,lv,DEM,16661,Kamala Harris,51.0,SurveyUSA,2.5,20.0,80.0,53.0
 89068,460,SurveyUSA,KSTP-TV Minneapolis | KAAL-TV | WDIO-TV Duluth,SurveyUSA,2.8,Online Panel,8.0,Minnesota,2024-10-24,2024-10-28,728.0,lv,REP,16651,Donald Trump,43.0,SurveyUSA,2.5,20.0,80.0,42.5
 89098,320,Monmouth,none,Monmouth University Polling Institute,2.9,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,824.0,rv,DEM,16661,Kamala Harris,46.0,unkwn,0,0,0,46.0
@@ -69,6 +73,30 @@ poll_id,pollster_id,pollster,sponsors,display_name,numeric_grade,methodology,tra
 89104,396,Quinnipiac,none,Quinnipiac University,2.8,Live Phone,9.0,Pennsylvania,2024-10-24,2024-10-28,2186.0,lv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
 89104,396,Quinnipiac,none,Quinnipiac University,2.8,Live Phone,9.0,Pennsylvania,2024-10-24,2024-10-28,2186.0,lv,DEM,16661,Kamala Harris,47.0,unkwn,0,0,0,47.0
 89104,396,Quinnipiac,none,Quinnipiac University,2.8,Live Phone,9.0,Pennsylvania,2024-10-24,2024-10-28,2186.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1310.0,rv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1310.0,rv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1057.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1057.0,lv,REP,16651,Donald Trump,48.0,unkwn,0,0,0,48.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1310.0,rv,DEM,16661,Kamala Harris,50.0,unkwn,0,0,0,50.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1310.0,rv,REP,16651,Donald Trump,48.0,unkwn,0,0,0,48.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1057.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
+89109,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Pennsylvania,2024-10-24,2024-10-28,1057.0,lv,REP,16651,Donald Trump,50.0,unkwn,0,0,0,50.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,988.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,988.0,lv,REP,16651,Donald Trump,46.0,unkwn,0,0,0,46.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,1275.0,rv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,1275.0,rv,REP,16651,Donald Trump,45.0,unkwn,0,0,0,45.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,988.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,988.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,1275.0,rv,DEM,16661,Kamala Harris,50.0,unkwn,0,0,0,50.0
+89110,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,Michigan,2024-10-24,2024-10-28,1275.0,rv,REP,16651,Donald Trump,48.0,unkwn,0,0,0,48.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,872.0,lv,DEM,16661,Kamala Harris,47.0,unkwn,0,0,0,47.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,872.0,lv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,1113.0,rv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,1113.0,rv,REP,16651,Donald Trump,47.0,unkwn,0,0,0,47.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,872.0,lv,DEM,16661,Kamala Harris,49.0,unkwn,0,0,0,49.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,872.0,lv,REP,16651,Donald Trump,50.0,unkwn,0,0,0,50.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,1113.0,rv,DEM,16661,Kamala Harris,50.0,unkwn,0,0,0,50.0
+89113,1597,Beacon/Shaw,FOX News,Beacon Research/Shaw & Company Research,2.8,Live Phone/Text-to-Web,9.0,North Carolina,2024-10-24,2024-10-28,1113.0,rv,REP,16651,Donald Trump,49.0,unkwn,0,0,0,49.0
 89099,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Michigan,2024-10-23,2024-10-28,726.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
 89099,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Michigan,2024-10-23,2024-10-28,726.0,lv,REP,16651,Donald Trump,43.0,unkwn,0,0,0,43.0
 89100,1866,CNN/SSRS,none,CNN/SSRS,2.8,Live Phone/Text-to-Web/Email/Mail-to-Web/Mail-to-Phone,10.0,Pennsylvania,2024-10-23,2024-10-28,819.0,lv,DEM,16661,Kamala Harris,48.0,unkwn,0,0,0,48.0
